@@ -62,14 +62,14 @@ function Header() {
               Contact
             </NavLink>
             <NavLink to="/Login">
-              <button className="bg-gradient-to-r from-transparent to-transparent hover:underline hover:underline-offset-1 hover:from-pink-500 hover:to-yellow-500 rounded-lg px-3 lg:hidden flex">
+              <button className="bg-gradient-to-r from-transparent to-transparent hover:underline hover:underline-offset-1 rounded-lg px-3 lg:hidden flex">
                 Login
               </button>
             </NavLink>
           </Nav>
         </Navbar.Collapse>
         <NavLink to="/Login">
-          <button className="bg-[#24774F] text-white rounded-lg px-2 py-1 hidden lg:flex">
+          <button className="bg-[#24774F] text-white rounded-xl px-4 py-2 hidden lg:flex">
             Log in
           </button>
         </NavLink>

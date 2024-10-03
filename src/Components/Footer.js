@@ -16,8 +16,8 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         {/* About Us Section */}
         <div>
-          <img className="size-12" src="./logo.png" alt="" />
-          <h1 className="text-lg font-bold mb-4">
+          <img className="size-12" src="./logo.png" alt="logo" />
+          <h1 className="text-lg font-bold mb-2">
             Renu Sharma Healthcare & Education Foundation
           </h1>
           <p className="text-sm ">
@@ -45,7 +45,7 @@ const Footer = () => {
         {/* Quick Links Section */}
         <div>
           <h1 className="text-[16px] font-bold mb-4">Resources</h1>
-          <ul className="space-y-2">
+          <ul className="space-y-3">
             <li>
               <a href="/About" className="hover:text-gray-300">
                 About Us
@@ -84,16 +84,16 @@ const Footer = () => {
             <FaYoutube className="bg-[#1D5F41] size-8 rounded-full p-[6px] text-white" />
             <FaLink className="bg-[#1D5F41] size-8 rounded-full p-[6px] text-white" />
           </div>
-          <p className="text-sm  font-bold pb-1">Subscribe our Newsletter.</p>
+          <p className="text-sm  font-bold pb-2">Subscribe our Newsletter</p>
           <form className="flex ">
             <input
               type="email"
               placeholder="Enter your email"
-              className="p-2 border-[#24774F] border-1 rounded-l-xl text-gray-500"
+              className="p-2 border-[#24774F] border-1 rounded-l-2xl text-gray-500"
             />
             <button
               type="submit"
-              className="bg-[#24774F] text-white p-2 rounded-r-xl hover:bg-gray-100"
+              className="bg-[#24774F] text-white px-4 py-2 rounded-r-2xl "
             >
               Subscribe
             </button>
@@ -102,7 +102,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-slate-300 mt-10 flex justify-center items-center gap-3">
-        <img className="size-6" src="./logo.png" alt="" />
+        <img className="size-6" src="./logo.png" alt="logo" />
         <p className="text-center text-sm py-4 font-normal">
           © 2024 All Rights Reserved : Renu Sharma Healthcare & Education
           Foundation
