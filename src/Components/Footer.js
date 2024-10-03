@@ -16,7 +16,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         {/* About Us Section */}
         <div>
-          <img className="size-12" src="./logo.png" alt="logo" />
+          <img className="size-14" src="/logo.png" alt="logo" />
           <h1 className="text-lg font-bold mb-2">
             Renu Sharma Healthcare & Education Foundation
           </h1>
@@ -102,7 +102,7 @@ const Footer = () => {
       </div>
 
       <div className="border-t border-slate-300 mt-10 flex justify-center items-center gap-3">
-        <img className="size-6" src="./logo.png" alt="logo" />
+        <img className="size-6" src="/logo.png" alt="logo" />
         <p className="text-center text-sm py-4 font-normal">
           © 2024 All Rights Reserved : Renu Sharma Healthcare & Education
           Foundation

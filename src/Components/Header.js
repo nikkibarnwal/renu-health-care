@@ -8,15 +8,15 @@ function Header() {
   return (
     <Navbar
       expand="lg"
-      className="bg-body-tertiary  px-1   sm:mb-1 sm:ml-1 sm:mr-1 sm:rounded-none h-1/10 sm:w-11/12 m-auto"
+      className="bg-body-tertiary  sm:mb-1 sm:ml-1 sm:mr-1 sm:rounded-none h-1/10 sm:w-11/12 m-auto"
     >
       <Container className="lg:flex lg:justify-between items-center">
         <Navbar.Brand href="#home">
           {/* logo container */}
           <Link href="/Home/Home">
             <img
-              src="./logo.png"
-              className="bg-white rounded-lg h-12 w-12"
+              src="/logo.png"
+              className="bg-white rounded-lg h-14 w-14"
               alt="logo"
             />
           </Link>
