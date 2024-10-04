@@ -12,12 +12,12 @@ import { MdOutlineEmail } from 'react-icons/md';
 
 const Footer = () => {
   return (
-    <div className=" text-black py-10 px-2 w-full">
+    <div className=" text-black py-10 px-2 w-full pl-5 lg:pl-0 ">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
         {/* About Us Section */}
-        <div>
-          <img className="size-14" src="/logo.png" alt="logo" />
-          <h1 className="text-lg font-bold mb-2">
+        <div className="">
+          <img className="size-14 " src="/logo.png" alt="logo" />
+          <h1 className="text-lg font-bold mb-2  ">
             Renu Sharma Healthcare & Education Foundation
           </h1>
           <p className="text-sm ">

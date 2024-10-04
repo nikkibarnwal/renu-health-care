@@ -1,12 +1,16 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
-import { fadeIn } from "./Variant";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { fadeIn } from './Variant';
+import { CiMail } from 'react-icons/ci';
+import { FiMail } from 'react-icons/fi';
+import { IoCallOutline } from 'react-icons/io5';
+import { MdOutlineLocationOn } from 'react-icons/md';
 
 const Donate = () => {
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [isValid, setIsValid] = useState(true);
 
-  const handleChange = (event) => {
+  const handleChange = event => {
     const { value } = event.target;
     const regex = /^\d{10}$/;
     const isValidPhoneNumber = regex.test(value);
@@ -16,140 +20,73 @@ const Donate = () => {
 
   return (
     <>
-      <div className="sm:w-11/12 m-auto bg-gray-100">
+      <div className="sm:w-11/12 m-auto ">
         {/* Hero Section */}
-        <motion.div
-          variants={fadeIn("up", 0.2)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.6 }}
-          className="relative h-52 sm:h-96 md:h-[40rem] rounded-sm flex flex-col justify-center sm:px-14 lg:px-32 px-5 text-white bg-no-repeat bg-cover opacity-90"
-          style={{
-            backgroundImage: `url("/Donate/main3.png")`,
-          }}
-        >
-          <div className="absolute inset-0 bg-black opacity-40"></div>
-          <div className="relative w-full lg:w-4/5 content-center space-y-5 text-center">
-            <motion.img
-              variants={fadeIn("down", 0.8)}
-              initial="hidden"
-              whileInView={"show"}
-              viewport={{ once: false, amount: 0.6 }}
-              src="/Donate/logo-give.png"
-              alt="Donate Logo"
-              className="mx-auto"
-            />
-            <p className="font-bold text-lg md:text-2xl tracking-widest">
-              Your support can make a difference! Help us make the world a better place.
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Donation Categories */}
-        <div className="max-w-7xl mx-auto my-8 px-8">
-          <h1 className="text-4xl text-center font-bold text-dGrey hover:text-bPrimary tracking-widest font-serif mb-8">
-            Choose Your Donation
+        <div className="p-2 lg:p-0">
+          <h1 className="text-2xl lg:text-4xl font-bold  text-center mt-6 mb-4">
+            Donate Some Happiness
           </h1>
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-5">
-            <div className="text-center shadow-xl mb-11 rounded-xl overflow-hidden transition-transform transform hover:scale-105">
-              <img
-                src="/Donate/img1.png"
-                className="h-96 object-cover"
-                alt="Education"
-              />
-              <div className="p-4 bg-white">
-                <h2 className="text-xl font-bold text-amber-700 py-2">Help Educate Children</h2>
-                <p className="text-gray-700">
-                  Contribute to providing educational resources and opportunities to underprivileged children.
+          <img
+            className="w-full rounded-lg my-2 lg:h-[500px] object-cover"
+            src="/Donate/hero donate.jpg"
+            alt=""
+          />
+          <p className="text-sm text-center">
+            Join us in making a lasting impact! Your generous donations to
+            RenuHealthcare enable us to deliver essential healthcare services,
+            social initiatives, and <br /> educational programs to underserved
+            communities. Together, we can create a healthier, more
+            compassionate world.
+          </p>
+        </div>
+
+        {/* show your support  */}
+
+        <div>
+          <h1 className="text-2xl lg:text-4xl font-bold  text-center mt-10">
+            Show Your Support
+          </h1>
+          <p className="text-[16px] text-center py-3">
+            Fill the following details to provide your support for the cause
+          </p>
+          <div className="flex flex-col lg:flex-row justify-center lg:items-center  gap-3 lg:gap-5 ml-6 lg:ml-0">
+            <div className="flex justify-start lg:justify-center items-center gap-6">
+              <MdOutlineLocationOn className="text-[#2F855A] text-3xl" />
+              <div>
+                <p>Address</p>
+                <p className="text-[16px] font-bold">
+                  Gurugram,Haryana - 122503,India
                 </p>
               </div>
             </div>
-            <div className="text-center shadow-xl mb-11 rounded-xl overflow-hidden transition-transform transform hover:scale-105">
-              <img
-                src="/Donate/img2.png"
-                className="h-96 object-cover"
-                alt="Health"
-              />
-              <div className="p-4 bg-white">
-                <h2 className="text-xl font-bold text-amber-700 py-2">Support Health Initiatives</h2>
-                <p className="text-gray-700">
-                  Help us provide essential healthcare services to those in need.
-                </p>
+            <div className="flex justify-start lg:justify-center items-center gap-6">
+              <IoCallOutline className="text-[#2F855A] text-3xl" />
+              <div>
+                <p>Call Us</p>
+                <p className="text-[16px] font-bold">+01234567890</p>
               </div>
             </div>
-            <div className="text-center shadow-xl mb-11 rounded-xl overflow-hidden transition-transform transform hover:scale-105">
-              <img
-                src="/Donate/img4.png"
-                className="h-96 object-cover"
-                alt="Housing"
-              />
-              <div className="p-4 bg-white">
-                <h2 className="text-xl font-bold text-amber-700 py-2">Build Safe Homes</h2>
-                <p className="text-gray-700">
-                  Contribute to building secure and sustainable housing for families in need.
-                </p>
-              </div>
-            </div>
-            <div className="text-center shadow-xl mb-11 rounded-xl overflow-hidden transition-transform transform hover:scale-105">
-              <img
-                src="/Donate/mainimg.png"
-                className="h-96 object-cover"
-                alt="Food"
-              />
-              <div className="p-4 bg-white">
-                <h2 className="text-xl font-bold text-amber-700 py-2">Provide Nutritious Food</h2>
-                <p className="text-gray-700">
-                  Support initiatives aimed at providing healthy and nutritious food to those in need.
-                </p>
-              </div>
-            </div>
-            <div className="text-center shadow-xl mb-11 rounded-xl overflow-hidden transition-transform transform hover:scale-105">
-              <img
-                src="/Donate/mainimg2.png"
-                className="h-96 object-cover"
-                alt="Food"
-              />
-              <div className="p-4 bg-white">
-                <h2 className="text-xl font-bold text-amber-700 py-2">Improve Food Security</h2>
-                <p className="text-gray-700">
-                  Help us tackle food insecurity through targeted programs and support.
-                </p>
-              </div>
-            </div>
-            <div className="text-center shadow-xl mb-11 rounded-xl overflow-hidden transition-transform transform hover:scale-105">
-              <img
-                src="/Donate/education.png"
-                className="h-96 object-cover"
-                alt="Education"
-              />
-              <div className="p-4 bg-white">
-                <h2 className="text-xl font-bold text-amber-700 py-2">Advance Education</h2>
-                <p className="text-gray-700">
-                  Assist in providing educational materials and scholarships to underprivileged students.
-                </p>
+            <div className="flex justify-start lg:justify-center items-center gap-6">
+              <FiMail className="text-[#2F855A] text-3xl" />
+              <div>
+                <p>Email Us</p>
+                <p className="text-[16px] font-bold">info@renuhealthcare.com</p>
               </div>
             </div>
           </div>
         </div>
 
         {/* Donation Form */}
-        <motion.div className="w-full flex items-center justify-center min-h-screen bg-gray-100">
-          <motion.div className="relative flex flex-col m-4 space-y-4 bg-white shadow-2xl rounded-2xl md:flex-row md:space-y-0 p-4 md:p-8">
+        <motion.div className=" flex items-center justify-center min-h-screen ">
+          <motion.div className="relative grid grid-cols-1 lg:grid-cols-5 m-4 space-y-4 bg-white  rounded-2xl md:flex-row md:space-y-0  gap-6">
             <motion.div
-              variants={fadeIn("down", 0.3)}
+              variants={fadeIn('down', 0.3)}
               initial="hidden"
-              whileInView={"show"}
+              whileInView={'show'}
               viewport={{ once: false, amount: 0.6 }}
-              className="flex flex-col justify-center mt-0 p-4 md:p-8"
+              className="flex flex-col justify-center mt-0 p-2 md:p-0 col-span-2"
             >
-              <img src="/logo.png" className="h-20 w-20 mx-auto" alt="logo" />
-              <h1 className="text-3xl font-bold text-bPrimary text-center mb-4">
-                Support Us Today!
-              </h1>
-              <p className="text-center mb-6 text-gray-600">
-                Fill in your details and make a difference. Your contribution matters!
-              </p>
-              <form className="space-y-4">
+              <form className="space-y-6">
                 <div className="flex flex-col">
                   <label className="text-md tracking-wider mb-2">Name</label>
                   <input
@@ -167,7 +104,7 @@ const Donate = () => {
                   />
                 </div>
                 <div className="flex flex-col">
-                  <label className="text-md tracking-wider mb-2">Mobile Number</label>
+                  <label className="text-md tracking-wider mb-2">Phone</label>
                   <input
                     type="tel"
                     className="w-full p-3 border border-gray-300 rounded-md"
@@ -176,41 +113,41 @@ const Donate = () => {
                     onChange={handleChange}
                   />
                   {!isValid && (
-                    <p className="text-red-500 mt-2">Please enter a valid 10-digit phone number.</p>
+                    <p className="text-red-500 mt-2">
+                      Please enter a valid 10-digit phone number.
+                    </p>
                   )}
                 </div>
                 <div className="flex flex-col">
-                  <label className="text-md tracking-wider mb-2">Donation Amount</label>
+                  <label className="text-md tracking-wider mb-2">Amount</label>
                   <input
                     type="number"
                     className="w-full p-3 border border-gray-300 rounded-md"
                     placeholder="Amount"
                   />
                 </div>
-                <div className="flex justify-center">
-                  <button className="w-full bg-black text-white p-3 rounded-lg hover:bg-gray-800">
-                    Donate Now
+                <div className="flex justify-start">
+                  <button className=" bg-[#24774F] text-white px-4 py-2 rounded-2xl hover:bg-gray-800">
+                    Submit
                   </button>
                 </div>
               </form>
             </motion.div>
             <motion.div
-              variants={fadeIn("right", 0.3)}
+              variants={fadeIn('right', 0.3)}
               initial="hidden"
-              whileInView={"show"}
+              whileInView={'show'}
               viewport={{ once: false, amount: 0.6 }}
-              className="relative hidden md:block"
+              className="relative hidden md:block col-span-3"
             >
               <img
-                src="/Donate/donate.png"
+                src="/Donate/donate form image.jpg"
                 alt="Donation"
-                className="w-full h-full object-cover rounded-r-2xl"
+                className="w-full h-full object-cover rounded-xl"
               />
             </motion.div>
           </motion.div>
         </motion.div>
-
-      
       </div>
     </>
   );
