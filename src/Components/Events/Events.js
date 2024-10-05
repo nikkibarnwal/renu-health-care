@@ -45,39 +45,40 @@ const Event = () => {
 /* Single event component */
 const Card = ({ event }) => {
   return (
-    <div className="card w-[386.67px] h-[400px] min-w-[328px] rounded-[12px] border border-gray-300 p-3 flex flex-col justify-between">
-      {/* Event image */}
-      <div className="h-50 md:h-48 lg:h-56">
-        <img
-          className="object-cover w-full h-full rounded-lg"
-          src={event.image}
-          alt={event.title}
-        />
-      </div>
+    <div className="card w-[386.67px] h-[400px] min-w-[328px] rounded-[12px] border border-gray-300 p-3 flex flex-col justify-between transition-transform duration-300 hover:shadow-lg hover:border-green-600 transform hover:scale-105">
+  {/* Event image */}
+  <div className="h-50 md:h-48 lg:h-56">
+    <img
+      className="object-cover w-full h-full rounded-lg"
+      src={event.image}
+      alt={event.title}
+    />
+  </div>
 
-      {/* Event description */}
-      <div className="flex flex-col justify-between h-30 md:h-48 lg:h-56">
-        <h3 className="text-base font-bold">{event.title}</h3>
-        
-        {/* Flex container for date and time */}
-        <div className="flex justify-between text-sm">
-          <p className="event-date">{event.date}</p>
-          <p className="event-time ">Time: {event.time}</p>
-        </div>
+  {/* Event description */}
+  <div className="flex flex-col justify-between h-30 md:h-48 lg:h-56">
+    <h3 className="text-base font-bold">{event.title}</h3>
 
-        <p className="event-content">{event.description}</p>
-
-        {/* Show Interest button aligned to the left */}
-        <div className="flex justify-start">
-          <button
-            type="submit"
-            className="bg-green-600 text-white p-2 rounded-md"
-          >
-            Show Interest
-          </button>
-        </div>
-      </div>
+    {/* Flex container for date and time */}
+    <div className="flex justify-between text-sm">
+      <p className="event-date">{event.date}</p>
+      <p className="event-time">Time: {event.time}</p>
     </div>
+
+    <p className="event-content">{event.description}</p>
+
+    {/* Show Interest button aligned to the left */}
+    <div className="flex justify-start">
+      <button
+        type="submit"
+        className="bg-green-600 text-white p-2 rounded-md"
+      >
+        Show Interest
+      </button>
+    </div>
+  </div>
+</div>
+
   );
 };
 
