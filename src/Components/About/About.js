@@ -5,66 +5,69 @@ const About = () => {
   return (
     <div className="sm:w-11/12 m-auto">
       {/* Main section */}
-      <div className="bg-gray-100 overflow-hidden">
+      <div className="bg-gray-100 overflow-hidden  ">
+      
         {/* Hero Image Section */}
-        <div
-          className="mb-4 flex rounded-sm items-center h-52 sm:h-96 md:h-[40rem] justify-center w-full bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: `url("/About-img/about-page-img-1.jpg")`,
-          }}
-        >
-          <h1 className="text-5xl md:text-6xl font-bold text-white bg-gradient-to-r from-green-600 via-teal-600 to-blue-600 bg-clip-text text-transparent">
+        <div clasName="mb-4 w-full">
+          <h1 className="text-5xl md:text-4xl font-bold text-black bg-gradient-to-r from-green-600 via-teal-600 to-blue-600 bg-clip-text text-corner mb-4  ">
             About Us
           </h1>
+          </div>
+        <div
+          className="mb-4 flex rounded-sm items-center h-52 sm:h-96 md:h-[40rem] justify-center w-full bg-cover bg-center bg-no-repeat "
+          style={{
+            backgroundImage: `url("/About-img/Component 4.jpg")`,
+          }}
+        >
+          
         </div>
+        
 
         {/* Content Section */}
         <div id="2" className="lg:px-20 lg:flex my-24 sm:mx-4 overflow-hidden">
+        <div className="lg:w-1/2 px-4 mt-6 lg:mt-0">
+            <h3 className="text-2xl  md:text-3xl font-bold text-gray-800">
+              Welcome To Welfare Organization 
+              <span > Established Since 2015</span>
+            </h3>
+            <p className="mt-4 text-md md:text-lg text-gray-600 leading-relaxed font-semibold">
+              Our mission is to create a world where everyone has access to basic human rights, education, healthcare, and opportunities for sustainable livelihoods. We envision empowered communities working together to overcome poverty, injustice, and environmental degradation, fostering a global society built on dignity, equality, and compassion.
+            </p>
+          </div>
           <div className="lg:w-1/2 px-4">
             <img
               className="w-full rounded-lg shadow-lg"
-              src="./About-img/about-page-img-2.jpg"
+              src="./About-img/Welcome_Pic.jpg"
               alt="About us"
             />
           </div>
 
+          
+        </div>
+
+        {/* Content Section part 2*/}
+        <div id="2" className="lg:px-20 lg:flex my-24 sm:mx-4 overflow-hidden">
+        
+          <div className="lg:w-1/2 px-4">
+            <img
+              className="w-full rounded-lg shadow-lg"
+              src="./About-img/our_vision_pic.jpg"
+              alt="About us"
+            />
+          </div>
           <div className="lg:w-1/2 px-4 mt-6 lg:mt-0">
-            <h3 className="text-2xl md:text-3xl font-semibold text-gray-800">
-              Welcome To Our Welfare Organization Established Since{" "}
-              <span className="text-green-600">2015</span>
+            <h3 className="text-2xl  md:text-3xl font-bold text-gray-800">
+              Our Vision
             </h3>
-            <p className="mt-4 text-md md:text-lg text-gray-600 leading-relaxed">
+            <p className="mt-4 text-md md:text-lg text-gray-600 leading-relaxed font-semibold">
               Our mission is to create a world where everyone has access to basic human rights, education, healthcare, and opportunities for sustainable livelihoods. We envision empowered communities working together to overcome poverty, injustice, and environmental degradation, fostering a global society built on dignity, equality, and compassion.
             </p>
           </div>
+
+          
         </div>
 
-        {/* Stats Section */}
-        <div id="3" className="lg:px-20 flex flex-col md:flex-row justify-center my-12 mx-4 gap-6 overflow-hidden">
-          <div className="bg-gradient-to-br from-green-500 to-teal-500 text-white lg:w-1/3 p-6 rounded-lg shadow-xl">
-            <h3 className="text-xl font-semibold">Served Over</h3>
-            <p className="text-4xl font-bold mt-2">1,432,804</p>
-            <p className="mt-2 text-lg">Children in 190 countries around the world</p>
-          </div>
-          <div className="bg-gradient-to-br from-teal-400 to-blue-500 text-white lg:w-1/3 p-6 rounded-lg shadow-xl">
-            <h3 className="text-xl font-semibold">Donate Money</h3>
-            <p className="mt-2 text-lg opacity-80">
-              Your contributions make a difference. Even small donations can have a significant impact.
-            </p>
-            <button className="mt-4 bg-white text-teal-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition">
-              Donate Now
-            </button>
-          </div>
-          <div className="bg-gradient-to-br from-blue-400 to-indigo-500 text-white lg:w-1/3 p-6 rounded-lg shadow-xl">
-            <h3 className="text-xl font-semibold">Be a Volunteer</h3>
-            <p className="mt-2 text-lg opacity-80">
-              Join us in making a difference. Your time and skills can help us achieve our mission.
-            </p>
-            <button className="mt-4 bg-white text-blue-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition">
-              Volunteer
-            </button>
-          </div>
-        </div>
+        
         {/* added image with text overlay */}
         <div className="relative mx-3">
           <img
