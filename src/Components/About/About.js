@@ -5,7 +5,7 @@ const About = () => {
   return (
     <div className="sm:w-11/12 m-auto">
       {/* Main section */}
-      <div className="bg-gray-100 overflow-hidden  ">
+      <div className="bg overflow-hidden  ">
       
         {/* Hero Image Section */}
         <div clasName="mb-4 w-full">
@@ -26,11 +26,11 @@ const About = () => {
         {/* Content Section */}
         <div id="2" className="lg:px-20 lg:flex my-24 sm:mx-4 overflow-hidden">
         <div className="lg:w-1/2 px-4 mt-6 lg:mt-0">
-            <h3 className="text-2xl  md:text-3xl font-bold text-gray-800">
+            <h3 className="text-2xl  md:text-4xl font-bold text-black">
               Welcome To Welfare Organization 
               <span > Established Since 2015</span>
             </h3>
-            <p className="mt-4 text-md md:text-lg text-gray-600 leading-relaxed font-semibold">
+            <p className="mt-4 text-md md:text-lg text-black leading-relaxed font-semibold">
               Our mission is to create a world where everyone has access to basic human rights, education, healthcare, and opportunities for sustainable livelihoods. We envision empowered communities working together to overcome poverty, injustice, and environmental degradation, fostering a global society built on dignity, equality, and compassion.
             </p>
           </div>
@@ -56,10 +56,10 @@ const About = () => {
             />
           </div>
           <div className="lg:w-1/2 px-4 mt-6 lg:mt-0">
-            <h3 className="text-2xl  md:text-3xl font-bold text-gray-800">
+            <h3 className="text-3xl  md:text-4xl font-bold text-black">
               Our Vision
             </h3>
-            <p className="mt-4 text-md md:text-lg text-gray-600 leading-relaxed font-semibold">
+            <p className="mt-4 text-md md:text-lg text-black leading-relaxed font-semibold">
               Our mission is to create a world where everyone has access to basic human rights, education, healthcare, and opportunities for sustainable livelihoods. We envision empowered communities working together to overcome poverty, injustice, and environmental degradation, fostering a global society built on dignity, equality, and compassion.
             </p>
           </div>
