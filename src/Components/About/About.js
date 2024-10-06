@@ -16,7 +16,7 @@ const About = () => {
         <div
           className="mb-4 flex rounded-sm items-center h-52 sm:h-96 md:h-[40rem] justify-center w-full bg-cover bg-center bg-no-repeat "
           style={{
-            backgroundImage: `url("/About-img/Component 4.jpg")`,
+            backgroundImage: `url("/About-img/img1.jpg")`,
           }}
         >
           
@@ -37,7 +37,7 @@ const About = () => {
           <div className="lg:w-1/2 px-4">
             <img
               className="w-full rounded-lg shadow-lg"
-              src="./About-img/Welcome_Pic.jpg"
+              src="./About-img/img3.jpg"
               alt="About us"
             />
           </div>
@@ -51,7 +51,7 @@ const About = () => {
           <div className="lg:w-1/2 px-4">
             <img
               className="w-full rounded-lg shadow-lg"
-              src="./About-img/our_vision_pic.jpg"
+              src="./About-img/img2.jpg"
               alt="About us"
             />
           </div>
