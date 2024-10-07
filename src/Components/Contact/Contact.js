@@ -149,7 +149,7 @@ const ContactUs = () => {
 >
   <img
     src="/Contact/ContactUs.png"
-    className="rounded-lg w-full" // w-full makes the image take the full width on smaller screens
+    className="rounded-lg w-full" 
     alt="contact location"
   />
 </div>
