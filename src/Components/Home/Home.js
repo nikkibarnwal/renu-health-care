@@ -1,40 +1,5 @@
-import React from "react";
-import { useState,useEffect } from "react";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import React, { useState, useEffect } from 'react';
 
-const Home = () => {
-
-  {/*Carousel Images and Contents */}
-  const slides = [
-    {
-      img: "./HomePageIMGs/Carousel/Screenshot 2024-10-06 112119.png",
-      heading: 'Support Our Cause',
-      para: 'Your contribution can change lives. Donate now to support our healthcare and education initiatives.', 
-      button: 'Donate Now',
-    },
-    {
-      img: "./HomePageIMGs/Carousel/Screenshot 2024-10-06 112433.png",
-      heading: 'Become an Intern',
-      para: 'Join our team and make an impact through healthcare or education programs.',
-      button: 'Apply Now',
-    },
-    {
-      img: "./HomePageIMGs/Carousel/Screenshot 2024-10-06 112353.png",
-      heading: 'Join as a Volunteer',
-      para: 'Contribute your time and skills to support our healthcare and education programs. Be a part of positive change today!',
-      button: 'Be a Volunteer',
-    },
-  ];
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  // Function to move to the next slide
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-  };
-
-  // Automatic slide transition
 const HomePage = () => {
   const images = [
     '/HomepageImages/Corousel/Home9.jpg',
@@ -47,20 +12,130 @@ const HomePage = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      nextSlide();
-    }, 3000); // Slide every 3 seconds
-    return () => clearInterval(interval);
-  }, []);
-  
-    const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 3000);
 
     return () => clearInterval(interval);
   }, [images.length]);
 
+
+
+ {/*Carousel Images and Contents */}
+ const slides = [
+  {
+    img: "./HomePageIMGs/Carousel/Screenshot 2024-10-06 112119.png",
+    heading: 'Support Our Cause',
+    para: 'Your contribution can change lives. Donate now to support our healthcare and education initiatives.', 
+    button: 'Donate Now',
+  },
+  {
+    img: "./HomePageIMGs/Carousel/Screenshot 2024-10-06 112433.png",
+    heading: 'Become an Intern',
+    para: 'Join our team and make an impact through healthcare or education programs.',
+    button: 'Apply Now',
+  },
+  {
+    img: "./HomePageIMGs/Carousel/Screenshot 2024-10-06 112353.png",
+    heading: 'Join as a Volunteer',
+    para: 'Contribute your time and skills to support our healthcare and education programs. Be a part of positive change today!',
+    button: 'Be a Volunteer',
+  },
+];
+const [currentSlide, setCurrentSlide] = useState(0);
+
+// Function to move to the next slide
+const nextSlide = () => {
+  setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+};
+
+// Automatic slide transition
+useEffect(() => {
+  const interval = setInterval(() => {
+    nextSlide();
+  }, 3000); // Slide every 3 seconds
+  return () => clearInterval(interval);
+}, []);
+
+
   return (
-  <div>
+    <div className="home-page">
+      {/* Empowering Communities Section */}
+      <section className="bg-gray-100 py-16">
+        <div className="container mx-auto px-6 md:px-16 lg:px-24 grid grid-cols-1 md:grid-cols-2 gap-12">
+          
+          {/* Left Side: Text Content */}
+          <div className="flex flex-col justify-center space-y-6">
+            <h1 className="text-gray-900" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '42px', lineHeight: '50.4px' }}>
+              Empowering Communities <br />
+              <span style={{ fontWeight: 800 }}>Through Health & Social Care</span>
+            </h1>
+            <p className="text-gray-700" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400, fontSize: '18px', lineHeight: '28px' }}>
+              At RenuHealthcare, we provide accessible healthcare, engage in impactful Social work, and offer valuable internship opportunities to build a healthier, stronger future for all.
+            </p>
+            <button
+              className="bg-green-600 text-white text-base md:text-lg font-semibold hover:bg-green-700 transition duration-300"
+              style={{
+                width: '190px',
+                height: '58px',
+                borderRadius: '10px',
+                paddingTop: '15px',
+                paddingRight: '32px',
+                paddingBottom: '15px',
+                paddingLeft: '32px'
+              }}
+            >
+              Sign Up
+            </button>
+          </div>
+
+          {/* Right Side: Image Carousel */}
+          <div className="relative h-[400px] overflow-hidden">
+            {images.map((image, index) => (
+              <img
+                key={index}
+                src={image}
+                alt=""
+                className={`rounded-lg shadow-lg object-cover w-full h-full transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? 'opacity-100' : 'opacity-0 absolute'}`}
+                style={{ position: 'absolute', top: 0, left: 0 }}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+      <br />
+      
+      {/* About Us Section */}
+      <section className="bg-gray-100 py-16">
+        <div className="container mx-auto px-6 md:px-16 lg:px-24 grid grid-cols-1 md:grid-cols-2 gap-12">
+
+          {/* Left Column: Image */}
+          <div>
+            <img 
+              src="/HomepageImages/Corousel/Home13.png" 
+              alt="Education and Growth" 
+              className="rounded-lg shadow-lg object-cover w-full h-full" 
+            />
+          </div>
+
+          {/* Right Column: Text Content */}
+          <div className="flex flex-col justify-center space-y-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug text-gray-900" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800 }}>
+              About us: Education and Growth
+            </h2>
+            <p className="text-gray-700" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400, fontSize: '18px', lineHeight: '28px' }}>
+              Our mission is to empower underprivileged communities through education and sustainable development. We believe that every individual deserves access to quality education, which serves as a powerful tool for personal and community transformation. By providing resources, training, and support, we aim to cultivate skills and knowledge that enable individuals to improve their living conditions and achieve their full potential. Through sustainable practices, we strive to create lasting change that benefits not just individuals, but entire communities.
+            </p>
+            <br />
+            <a href="#" className="text-green-600 hover:underline text-base md:text-lg font-medium">
+              Learn more &gt;
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+
+      <div>
     {/* Carusel */}
     <div className="relative w-full max-w-[1240px] h-[320px] overflow-visible mx-auto flex justify-center">
       {/* Loop through slides */}
@@ -147,47 +222,6 @@ const HomePage = () => {
               </div>
             </div>
             <button className="bg-green-800 text-white px-4 py-2.5 rounded-lg mt-8">Explore More</button>
-    <div className="home-page">
-      {/* Empowering Communities Section */}
-      <section className="bg-gray-100 py-16">
-        <div className="container mx-auto px-6 md:px-16 lg:px-24 grid grid-cols-1 md:grid-cols-2 gap-12">
-          
-          {/* Left Side: Text Content */}
-          <div className="flex flex-col justify-center space-y-6">
-            <h1 className="text-gray-900" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '42px', lineHeight: '50.4px' }}>
-              Empowering Communities <br />
-              <span style={{ fontWeight: 800 }}>Through Health & Social Care</span>
-            </h1>
-            <p className="text-gray-700" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400, fontSize: '18px', lineHeight: '28px', width: '539px', height: '112px' }}>
-              At RenuHealthcare, we provide accessible healthcare, engage in impactful Social work, and offer valuable internship opportunities to build a healthier, stronger future for all.
-            </p>
-            <button
-              className="bg-green-600 text-white text-base md:text-lg font-semibold hover:bg-green-700 transition duration-300"
-              style={{
-                width: '190px',
-                height: '58px',
-                borderRadius: '10px',
-                paddingTop: '15px',
-                paddingRight: '32px',
-                paddingBottom: '15px',
-                paddingLeft: '32px'
-              }}
-            >
-              Sign Up
-            </button>
-          </div>
-
-          {/* Right Side: Image Carousel */}
-          <div className="relative h-[400px] overflow-hidden">
-            {images.map((image, index) => (
-              <img
-                key={index}
-                src={image}
-                alt=""
-                className={`rounded-lg shadow-lg object-cover w-full h-full transition-opacity duration-1000 ease-in-out ${index === currentImageIndex ? 'opacity-100' : 'opacity-0 absolute'}`}
-                style={{ position: 'absolute', top: 0, left: 0 }}
-              />
-            ))}
           </div>
         </div>
       </div>
@@ -210,20 +244,6 @@ const HomePage = () => {
               src=".\HomePageIMGS\WhatsApp Image 2024-09-26 at 20.21.23_dc4ff739 1.png" 
               alt="FAQ-img" 
               className="w-full h-auto object-cover rounded-lg"
-            />
-          </div>
-      </section>
-      <br />
-      {/* About Us Section */}
-      <section className="bg-gray-100 py-16">
-        <div className="container mx-auto px-6 md:px-16 lg:px-24 grid grid-cols-1 md:grid-cols-2 gap-12">
-
-          {/* Left Column: Image */}
-          <div>
-            <img 
-              src="/HomepageImages/Corousel/Home13.png" 
-              alt="Education and Growth" 
-              className="rounded-lg shadow-lg object-cover w-full h-full" 
             />
           </div>
 
@@ -250,26 +270,10 @@ const HomePage = () => {
               </p>
             </div>
           </div>
-          {/* Right Column: Text Content */}
-          <div className="flex flex-col justify-center space-y-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug text-gray-900" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 800, fontSize: '42px', lineHeight: '50.4px' }}>
-              About us: Education and Growth
-            </h2>
-            <p className="text-gray-700" style={{ fontFamily: 'Poppins, sans-serif', fontWeight: 400, fontSize: '18px', lineHeight: '28px', width: '539px', height: '112px' }}>
-              Our mission is to empower underprivileged communities through education and sustainable development. We believe that every individual deserves access to quality education, which serves as a powerful tool for personal and community transformation.
-            </p>
-            <br />
-            <a href="#" className="text-green-600 hover:underline text-base md:text-lg font-medium">
-              Learn more &gt;
-            </a>
-          </div>
-
         </div>
       </div>
     </section>
   </div>
-  )
-      </section>
     </div>
   );
 };
