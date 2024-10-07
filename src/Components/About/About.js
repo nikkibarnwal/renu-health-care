@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -34,22 +34,33 @@ const About = () => {
               <span className="text-green-600">2015</span>
             </h3>
             <p className="mt-4 text-md md:text-lg text-gray-600 leading-relaxed">
-              Our mission is to create a world where everyone has access to basic human rights, education, healthcare, and opportunities for sustainable livelihoods. We envision empowered communities working together to overcome poverty, injustice, and environmental degradation, fostering a global society built on dignity, equality, and compassion.
+              Our mission is to create a world where everyone has access to
+              basic human rights, education, healthcare, and opportunities for
+              sustainable livelihoods. We envision empowered communities working
+              together to overcome poverty, injustice, and environmental
+              degradation, fostering a global society built on dignity,
+              equality, and compassion.
             </p>
           </div>
         </div>
 
         {/* Stats Section */}
-        <div id="3" className="lg:px-20 flex flex-col md:flex-row justify-center my-12 mx-4 gap-6 overflow-hidden">
+        <div
+          id="3"
+          className="lg:px-20 flex flex-col md:flex-row justify-center my-12 mx-4 gap-6 overflow-hidden"
+        >
           <div className="bg-gradient-to-br from-green-500 to-teal-500 text-white lg:w-1/3 p-6 rounded-lg shadow-xl">
             <h3 className="text-xl font-semibold">Served Over</h3>
             <p className="text-4xl font-bold mt-2">1,432,804</p>
-            <p className="mt-2 text-lg">Children in 190 countries around the world</p>
+            <p className="mt-2 text-lg">
+              Children in 190 countries around the world
+            </p>
           </div>
           <div className="bg-gradient-to-br from-teal-400 to-blue-500 text-white lg:w-1/3 p-6 rounded-lg shadow-xl">
             <h3 className="text-xl font-semibold">Donate Money</h3>
             <p className="mt-2 text-lg opacity-80">
-              Your contributions make a difference. Even small donations can have a significant impact.
+              Your contributions make a difference. Even small donations can
+              have a significant impact.
             </p>
             <button className="mt-4 bg-white text-teal-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition">
               Donate Now
@@ -58,7 +69,8 @@ const About = () => {
           <div className="bg-gradient-to-br from-blue-400 to-indigo-500 text-white lg:w-1/3 p-6 rounded-lg shadow-xl">
             <h3 className="text-xl font-semibold">Be a Volunteer</h3>
             <p className="mt-2 text-lg opacity-80">
-              Join us in making a difference. Your time and skills can help us achieve our mission.
+              Join us in making a difference. Your time and skills can help us
+              achieve our mission.
             </p>
             <button className="mt-4 bg-white text-blue-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition">
               Volunteer
@@ -70,7 +82,7 @@ const About = () => {
           <img
             className="mx-auto rounded-md w-full max-w-[1240px] object-cover min-h-[150px] max-h-[300px]"
             src="https://s3-alpha-sig.figma.com/img/2ce7/eb51/20fe6b303aaaba2c345f3bc1ef88921f?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g~6gCjEqSgjMGiGBWx321ASkwIC9wlCvHJ4KFrYiYiZ8lrocyYeCAZDZOalxub91aWuy~oRynUANk0hcLGwmBKvd7ZweX97d3Kw6Tt9CiFpNm9OqHbxljluuSFFmvezxAA~~Q-2OEhexUyBiJFCblbrLrlPZXtv40cpQlfb505hQWdQ~7OoEmdJxk8sPlBDy7jyQEjmp4PlxuKjsxnSSgdi~FbqZ4aVwCd8ryvlozTlby2KQr3QHW3CyCXyy2I4EYFmftrMQH9Xcjx03gzD~TqsQaEdANJsQQQtLSXXxJPWyx3HrTcDKumVgD8TXe2up7IxHI7nYjkD~qM0bTQPuxw__"
-            alt="Responsive Image"
+            alt="Responsive"
           />
 
           {/* Black Gradient Overlay */}
@@ -80,9 +92,15 @@ const About = () => {
           <div className="absolute inset-0 flex flex-col justify-center text-white px-4 max-w-[100%] sm:max-w-[80%] md:max-w-[60%] lg:max-w-[50%] z-10 overflow-hidden">
             <h1 className="text-lg md:text-2xl font-bold mb-2">Join Us</h1>
             <p className="text-sm md:text-base mb-4 line-clamp-4">
-              EVERY donation, no matter how modest, has the remarkable power to create a ripple effect of change. So, the hesitation to donate, even if a small donation, to causes we care about often with the feeling that it may not be able to make a meaningful impact is incorrect.
+              EVERY donation, no matter how modest, has the remarkable power to
+              create a ripple effect of change. So, the hesitation to donate,
+              even if a small donation, to causes we care about often with the
+              feeling that it may not be able to make a meaningful impact is
+              incorrect.
             </p>
-            <button className="bg-white text-black px-3 py-2 rounded-md text-sm md:text-base">Donate Now</button>
+            <button className="bg-white text-black px-3 py-2 rounded-md text-sm md:text-base">
+              Donate Now
+            </button>
           </div>
         </div>
         {/* added image and form section */}
@@ -91,28 +109,46 @@ const About = () => {
             <img
               className="w-full h-[400px] rounded-md m-3 object-cover"
               src="https://s3-alpha-sig.figma.com/img/0650/3ffd/31b07025be6ee9bd538f833b3d537736?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=I6DLvz4bjv13jTm0gDObQCt565YU13MqYL9HRgRPGyeqsiJsCOpaFADXrenKyfJ8ASzHxiDJaVk0C~v4zpzE25FDoCpXWQXvQFqTpcY~9lWUCHLVM5ZfJqQBRi4ArC0TiIzP9WLqEL6rYd6mXfn45mlZp5sHM5oNGcn-49qoLVIl6f~qCYILqVx269D5txB6fAlHOGNrVTiYl9jzNWzsAhBu3x9ee1jJ8pvS4zGWKPOdzYCyx5MIarLoFn1NFYzB53zmCFXQgZLPyyM8U3SC16diY1hbPyuIVCwxSTDAmlg-H~KDk4CsqwzFT~eKNnwzBCIYFoLYO4zMfKdHZ4Jdnw__"
-              alt="Image"
+              alt="cover"
             />
           </div>
 
           <div className="w-full md:w-1/2 ml-2">
             <form className="flex flex-col h-[300px] p-4">
               <label className="mb-2">Name</label>
-              <input className="mb-4 p-2 border border-gray-300 rounded" placeholder="value" />
+              <input
+                className="mb-4 p-2 border border-gray-300 rounded"
+                placeholder="value"
+              />
               <label className="mb-2">Email</label>
-              <input className="mb-4 p-2 border border-gray-300 rounded" placeholder="value" />
+              <input
+                className="mb-4 p-2 border border-gray-300 rounded"
+                placeholder="value"
+              />
               <label className="mb-2">Suggestion</label>
-              <input className="mb-4 p-2 border border-gray-300 rounded" placeholder="value" />
-              <button className="bg-blue-500 text-white px-4 py-2 rounded">Submit</button>
+              <input
+                className="mb-4 p-2 border border-gray-300 rounded"
+                placeholder="value"
+              />
+              <button className="bg-blue-500 text-white px-4 py-2 rounded">
+                Submit
+              </button>
             </form>
           </div>
         </div>
         {/* added reviews Section */}
-        <div id="4" className="lg:px-20 flex flex-col items-center my-20 mx-4 overflow-hidden">
-          <h3 className="text-3xl md:text-4xl font-semibold text-gray-800">Latest Donations</h3>
+        <div
+          id="4"
+          className="lg:px-20 flex flex-col items-center my-20 mx-4 overflow-hidden"
+        >
+          <h3 className="text-3xl md:text-4xl font-semibold text-gray-800">
+            Latest Donations
+          </h3>
         </div>
-        <div id="5" className="lg:px-20 flex flex-col md:flex-row gap-6 my-10 mx-4 overflow-hidden">
-
+        <div
+          id="5"
+          className="lg:px-20 flex flex-col md:flex-row gap-6 my-10 mx-4 overflow-hidden"
+        >
           <div className="flex flex-col items-center bg-green-50 mb-8 shadow-lg rounded-lg p-6 ">
             <img
               className="w-16 h-16 rounded-full mr-4 mb-4"
@@ -121,7 +157,10 @@ const About = () => {
             />
             <div className="flex flex-col items-center justify-center">
               <p className="text-xl font-bold">Jonaki</p>
-              <p>Donated <span className="text-blue-300">₹500</span> for food of Childrens</p>
+              <p>
+                Donated <span className="text-blue-300">₹500</span> for food of
+                Childrens
+              </p>
               <Link className="text-blue-400">Donate Now</Link>
             </div>
           </div>
@@ -134,7 +173,10 @@ const About = () => {
             />
             <div className="flex flex-col items-center justify-center">
               <p className="text-xl font-bold">Jonaki</p>
-              <p>Donated <span className="text-blue-300">₹500</span> for food of Childrens</p>
+              <p>
+                Donated <span className="text-blue-300">₹500</span> for food of
+                Childrens
+              </p>
               <Link className="text-blue-400">Donate Now</Link>
             </div>
           </div>
@@ -147,7 +189,10 @@ const About = () => {
             />
             <div className="flex flex-col items-center justify-center">
               <p className="text-xl font-bold">Jonaki</p>
-              <p>Donated <span className="text-blue-300">₹500</span> for food of Childrens</p>
+              <p>
+                Donated <span className="text-blue-300">₹500</span> for food of
+                Childrens
+              </p>
               <Link className="text-blue-400">Donate Now</Link>
             </div>
           </div>
@@ -160,11 +205,13 @@ const About = () => {
             />
             <div className="flex flex-col items-center justify-center">
               <p className="text-xl font-bold">Jonaki</p>
-              <p>Donated <span className="text-blue-300">₹500</span> for food of Childrens</p>
+              <p>
+                Donated <span className="text-blue-300">₹500</span> for food of
+                Childrens
+              </p>
               <Link className="text-blue-400">Donate Now</Link>
             </div>
           </div>
-
         </div>
       </div>
     </div>
