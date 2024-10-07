@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom"
+import { IoIosArrowForward } from "react-icons/io";
 
 const About = () => {
   return (
@@ -119,10 +120,10 @@ const About = () => {
               src="https://s3-alpha-sig.figma.com/img/a159/2511/ebf77b2941895740c6837470593cc2d4?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=IDbnwB9KadNzmqYRmKFKZ8pgtzhV1siwJ83AD9kkmb3qzTWguo5qN93t1DbHfDlUugI1ARL0erkRhU7AiehmwDD~Dv0FduWuChkcc7xo5OpRUG7TmBSQSeuOoJuswyxLyFH46gwGmIzwJu-4aRsmwHF8ky8jQdmF19GS3BOKMPySjlEwdoqelXfWbIW0Aqf9mf2RxHsqCwjLvtD07Cqgi2E67RFp3NLf51RyVk-UCvU7a7Hp~VV~Zsr9~QGUgU0wBH2sFkGhDE3I77noeDSRanBEcydtlAdHTQATBO~p5zSJHlGMSBOi5piojt~TVKo9HdA53PY~AuFqhS3j~L75kg__"
               alt="Himanshu"
             />
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center text-center justify-center">
               <p className="text-xl font-bold">Jonaki</p>
-              <p>Donated <span className="text-blue-300">₹500</span> for food of Childrens</p>
-              <Link className="text-blue-400">Donate Now</Link>
+              <p>Donated <span className="text-blue-300 ">₹500</span> for food of Childrens</p>
+              <Link className="text-blue-400 flex items-center">Donate Now <span className="text-sm"><IoIosArrowForward /></span></Link>
             </div>
           </div>
 
@@ -132,10 +133,10 @@ const About = () => {
               src="https://s3-alpha-sig.figma.com/img/d7f7/597b/1674fcaa833e1b51f0c1d1da781564ff?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=LXwKvHGNpgtH77FcOj07l6yXfz1w5fVkosX-G-6cVaB25r3~iAQdJgoFuXgT3md6SUmzpuhqfUWeXtBOBifEFcwWZKZjWwewh6z4MQx7ll8tTbvbYlw8p1~~dcQuFLmmefoVDEIKMI31x-Buwh~idLHx6UU3VEZWY4S~hE3E7-VhzSdxNZwxVGL4ascXj6l2K4GX3OluF7zgGn8yfCIYoEgb3iErykigs0nz2IPdVb5NAbjHAaSmulAIKklx2VM4CsaeDvpeDwgZith6F9NWQRz1fCsOAvvidni912qx0Z2OI7aM~kvbQQnLm-7VQi-dWhzb6xRfpKPdJo-qpCHoCw__"
               alt="Himanshu"
             />
-            <div className="flex flex-col items-center justify-center">
+             <div className="flex flex-col items-center text-center justify-center">
               <p className="text-xl font-bold">Jonaki</p>
-              <p>Donated <span className="text-blue-300">₹500</span> for food of Childrens</p>
-              <Link className="text-blue-400">Donate Now</Link>
+              <p>Donated <span className="text-blue-300 ">₹500</span> for food of Childrens</p>
+              <Link className="text-blue-400 flex items-center">Donate Now <span className="text-sm"><IoIosArrowForward /></span></Link>
             </div>
           </div>
 
@@ -145,10 +146,10 @@ const About = () => {
               src="https://s3-alpha-sig.figma.com/img/d709/1e09/7daf15f4edf74a94bb33984f8d0fd58c?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g-lHy25o06bKzwzeDbrCLStKOGcOuIfXnYEpb5URo6o4lROrJklxo-FrfTRxGpLYxLq9t5fVWirN8yA4jTxc~yUk9swAGZ-q2EjNawxJN6jj9-g6STbfVYUMKRchMm-IxGC4XtHKvOia4I8sRiOiKd9jqiNpJYxVUwIIuqNWPJF~S8O5RtwubXYt2~debsda4A4Lj2OdtpnIaM0RN1VH7igErt-v7cdnlBf8UU4pkDTpU1hwgpoyRmqN1SLGCUfc1HQMvXPJAGylFJyGjDCTShMqTls~nyMMSaNjhwL6ry1spRFKwULulugc~0KmDwJcHWZltXrd6gDel5ppBnhufA__"
               alt="Himanshu"
             />
-            <div className="flex flex-col items-center justify-center">
+             <div className="flex flex-col items-center text-center justify-center">
               <p className="text-xl font-bold">Jonaki</p>
-              <p>Donated <span className="text-blue-300">₹500</span> for food of Childrens</p>
-              <Link className="text-blue-400">Donate Now</Link>
+              <p>Donated <span className="text-blue-300 ">₹500</span> for food of Childrens</p>
+              <Link className="text-blue-400 flex items-center">Donate Now <span className="text-sm"><IoIosArrowForward /></span></Link>
             </div>
           </div>
 
@@ -158,10 +159,10 @@ const About = () => {
               src="https://s3-alpha-sig.figma.com/img/4ef4/69b5/915faaa925d39a5e726e94e0fc15a069?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=WgsgN2cB-67i8h0~qUmUXr8D~LCEksVVSiOUrFXMP3Z0~z-e5LzoaAaToY9vRkp-0WmBKy1g0m21Eu9fnBMRlWUyfS8tybT3MzegezC0HknAXNOBRkglNsj226p0DmOPL7zjlRD~ifw4UuTOHxuDCf2I~1bAiOv~Uw6-a7jXRLdyXyce5KIFHDnyCDoe0fOHl6Gp5Dpnw4NGsTFA-RIKBuAkVqMeS3DyS2L584wNXW2lzoddBs1p-tojtd9fJvdSfn8R6iZQcyc-DZYXBhCEJ1~28kEuvsYBs~PpnFP88yjYikm0j1JJdr-5MflAWkC-0RAuh8NOmKTNvNiTlPaV6w__"
               alt="Himanshu"
             />
-            <div className="flex flex-col items-center justify-center">
+             <div className="flex flex-col items-center text-center justify-center">
               <p className="text-xl font-bold">Jonaki</p>
-              <p>Donated <span className="text-blue-300">₹500</span> for food of Childrens</p>
-              <Link className="text-blue-400">Donate Now</Link>
+              <p>Donated <span className="text-blue-300 ">₹500</span> for food of Childrens</p>
+              <Link className="text-blue-400 flex items-center">Donate Now <span className="text-sm"><IoIosArrowForward /></span></Link>
             </div>
           </div>
 
