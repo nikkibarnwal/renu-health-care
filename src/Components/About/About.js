@@ -73,7 +73,7 @@ const About = () => {
           <img
             className="mx-auto rounded-md w-full max-w-[1240px] object-cover min-h-[150px] max-h-[300px]"
             src="https://s3-alpha-sig.figma.com/img/2ce7/eb51/20fe6b303aaaba2c345f3bc1ef88921f?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g~6gCjEqSgjMGiGBWx321ASkwIC9wlCvHJ4KFrYiYiZ8lrocyYeCAZDZOalxub91aWuy~oRynUANk0hcLGwmBKvd7ZweX97d3Kw6Tt9CiFpNm9OqHbxljluuSFFmvezxAA~~Q-2OEhexUyBiJFCblbrLrlPZXtv40cpQlfb505hQWdQ~7OoEmdJxk8sPlBDy7jyQEjmp4PlxuKjsxnSSgdi~FbqZ4aVwCd8ryvlozTlby2KQr3QHW3CyCXyy2I4EYFmftrMQH9Xcjx03gzD~TqsQaEdANJsQQQtLSXXxJPWyx3HrTcDKumVgD8TXe2up7IxHI7nYjkD~qM0bTQPuxw__"
-            alt="Responsive"
+            alt="Responsive Image"
           />
 
           {/* Black Gradient Overlay */}
@@ -100,7 +100,7 @@ const About = () => {
             <img
               className="w-full h-[400px] rounded-md m-3 object-cover"
               src="https://s3-alpha-sig.figma.com/img/0650/3ffd/31b07025be6ee9bd538f833b3d537736?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=I6DLvz4bjv13jTm0gDObQCt565YU13MqYL9HRgRPGyeqsiJsCOpaFADXrenKyfJ8ASzHxiDJaVk0C~v4zpzE25FDoCpXWQXvQFqTpcY~9lWUCHLVM5ZfJqQBRi4ArC0TiIzP9WLqEL6rYd6mXfn45mlZp5sHM5oNGcn-49qoLVIl6f~qCYILqVx269D5txB6fAlHOGNrVTiYl9jzNWzsAhBu3x9ee1jJ8pvS4zGWKPOdzYCyx5MIarLoFn1NFYzB53zmCFXQgZLPyyM8U3SC16diY1hbPyuIVCwxSTDAmlg-H~KDk4CsqwzFT~eKNnwzBCIYFoLYO4zMfKdHZ4Jdnw__"
-              alt="cover"
+              alt="object-cover"
             />
           </div>
 
