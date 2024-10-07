@@ -73,7 +73,7 @@ const About = () => {
           <img
             className="mx-auto rounded-md w-full max-w-[1240px] object-cover min-h-[150px] max-h-[300px]"
             src="https://s3-alpha-sig.figma.com/img/2ce7/eb51/20fe6b303aaaba2c345f3bc1ef88921f?Expires=1728864000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=g~6gCjEqSgjMGiGBWx321ASkwIC9wlCvHJ4KFrYiYiZ8lrocyYeCAZDZOalxub91aWuy~oRynUANk0hcLGwmBKvd7ZweX97d3Kw6Tt9CiFpNm9OqHbxljluuSFFmvezxAA~~Q-2OEhexUyBiJFCblbrLrlPZXtv40cpQlfb505hQWdQ~7OoEmdJxk8sPlBDy7jyQEjmp4PlxuKjsxnSSgdi~FbqZ4aVwCd8ryvlozTlby2KQr3QHW3CyCXyy2I4EYFmftrMQH9Xcjx03gzD~TqsQaEdANJsQQQtLSXXxJPWyx3HrTcDKumVgD8TXe2up7IxHI7nYjkD~qM0bTQPuxw__"
-            alt="Responsive Image"
+            alt="Responsive"
           />
 
           {/* Black Gradient Overlay */}
