@@ -273,6 +273,43 @@ useEffect(() => {
         </div>
       </div>
     </section>
+    <section className="bg-green-700 py-12">
+      <div className="container mx-auto text-center text-white px-6">
+        {/* Main Heading */}
+        <h2 className="text-3xl md:text-4xl font-bold mb-4">
+          We’re Here to Help
+        </h2>
+        {/* Subheading */}
+        <p className="text-lg mb-8">
+          Have questions or want to get involved? Reach out to us!
+        </p>
+        {/* Contact Button */}
+        <button
+          className="bg-white text-green-700 font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-gray-200 transition duration-300"
+        >
+          Contact Us
+        </button>
+
+        {/* Contact Details */}
+        <div className="mt-10 flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12">
+          {/* Address */}
+          <div className="flex items-center space-x-2">
+            <i className="fas fa-map-marker-alt"></i>
+            <p>Gurugram, Haryana - 122503, India</p>
+          </div>
+          {/* Email */}
+          <div className="flex items-center space-x-2">
+            <i className="fas fa-envelope"></i>
+            <p>info@admedusociety.org</p>
+          </div>
+          {/* Phone */}
+          <div className="flex items-center space-x-2">
+            <i className="fas fa-phone"></i>
+            <p>+91-9671457366</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
     </div>
   );
