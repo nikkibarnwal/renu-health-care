@@ -60,7 +60,7 @@ useEffect(() => {
   return (
     <div className="home-page">
       {/* Empowering Communities Section */}
-      <section className="bg-gray-100 py-16">
+      <section className="bg-white py-16">
         <div className="container mx-auto px-6 md:px-16 lg:px-24 grid grid-cols-1 md:grid-cols-2 gap-12">
           
           {/* Left Side: Text Content */}
@@ -105,7 +105,7 @@ useEffect(() => {
       <br />
       
       {/* About Us Section */}
-      <section className="bg-gray-100 py-16">
+      <section className="bg-white py-16">
         <div className="container mx-auto px-6 md:px-16 lg:px-24 grid grid-cols-1 md:grid-cols-2 gap-12">
 
           {/* Left Column: Image */}
