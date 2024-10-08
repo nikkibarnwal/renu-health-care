@@ -66,9 +66,9 @@ useEffect(() => {
           
           {/* Left Side: Text Content */}
           <div className="flex flex-col justify-center space-y-6">
-            <h1 className="text-gray-900" style={{  fontWeight: 800, fontSize: '42px', lineHeight: '50.4px' }}>
+            <h1 className="text-black" style={{  fontWeight: 700, fontSize: '36px', lineHeight: '52px' }}>
               Empowering Communities <br />
-              <span style={{ fontWeight: 800 ,fontSize:'40px'}}>Through Health & Social Care</span>
+              <span style={{ fontWeight: 700 ,fontSize: '36px',}}>Through Health & Social Care</span>
             </h1>
             <p className="text-gray-900" style={{  fontWeight: 600, fontSize: '16px', lineHeight: '20px' }}>
               At RenuHealthcare, we provide accessible healthcare, engage in impactful Social work, and offer valuable internship opportunities to build a healthier, stronger future for all.
@@ -120,7 +120,7 @@ useEffect(() => {
 
           {/* Right Column: Text Content */}
           <div className="flex flex-col justify-center space-y-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug text-gray-900" style={{  fontWeight: 720 }}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug text-gray-900" style={{  fontWeight: 700,fontSize: '36px' }}>
               About us: Education and Growth
             </h2>
             <p className="text-gray-900" style={{  fontWeight: 600, fontSize: '16px', lineHeight: '20px' }}>
