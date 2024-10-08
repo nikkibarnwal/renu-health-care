@@ -61,11 +61,11 @@ const Card = ({ event }) => {
 
     {/* Flex container for date and time */}
     <div className="flex justify-between text-sm">
-      <p className="event-date">{event.date}</p>
+      <p className="event-date mb-9">{event.date}</p>
       <p className="event-time">Time: {event.time}</p>
     </div>
 
-    <p className="event-content">{event.description}</p>
+    <p className="event-content mb-4">{event.description}</p>
 
     {/* Show Interest button aligned to the left */}
     <div className="flex justify-start">
