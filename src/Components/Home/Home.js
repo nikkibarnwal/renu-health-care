@@ -74,7 +74,7 @@ useEffect(() => {
               At RenuHealthcare, we provide accessible healthcare, engage in impactful Social work, and offer valuable internship opportunities to build a healthier, stronger future for all.
             </p>
             <button
-              className="bg-green-700 text-white text-base md:text-lg  hover:bg-green-700 transition duration-300"
+              className="bg-[#24774F] text-white text-base md:text-lg  hover:bg-green-700 transition duration-300"
               style={{
                 width: '140px',
                 height: '58px',
@@ -274,7 +274,7 @@ useEffect(() => {
         </div>
       </div>
     </section>
-    <section className="bg-green-700 py-12">
+    <section className="bg-[#24774F] py-12">
       <div className="container mx-auto text-center text-white px-6">
         {/* Main Heading */}
        <h2
@@ -290,7 +290,7 @@ useEffect(() => {
         </p>
         {/* Contact Button */}
         <button
-          className="bg-white text-green-700 font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-gray-200 transition duration-300"
+          className="bg-white text-green-800 font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300"
         >
           Contact Us
         </button>
