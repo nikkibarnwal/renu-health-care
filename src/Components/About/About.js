@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className="sm:w-11/12 m-auto">
       {/* Main section */}
-      <div className=" overflow-hidden  ">
+      <div className="bg-gray-100 overflow-hidden  ">
 
         {/* Hero Image Section */}
         <div clasName="mb-4 w-full">
@@ -17,7 +17,7 @@ const About = () => {
         <div
           className="mb-4 flex rounded-sm items-center h-52 sm:h-96 md:h-[40rem] justify-center w-full bg-cover bg-center bg-no-repeat "
           style={{
-            backgroundImage: `url("/About-img/Component 4.jpg")`,
+            backgroundImage: `url("/About-img/img1.jpg")`,
           }}
         >
 
@@ -31,14 +31,14 @@ const About = () => {
               Welcome To Welfare Organization
               <span > Established Since 2015</span>
             </h3>
-            <p className="mt-4 text-md md:text-lg text-gray-600 leading-relaxed font-semibold">
+            <p className="mt-4 text-md md:text-lg text-black leading-relaxed font-semibold">
               Our mission is to create a world where everyone has access to basic human rights, education, healthcare, and opportunities for sustainable livelihoods. We envision empowered communities working together to overcome poverty, injustice, and environmental degradation, fostering a global society built on dignity, equality, and compassion.
             </p>
           </div>
           <div className="lg:w-1/2 px-4">
             <img
               className="w-full rounded-lg shadow-lg"
-              src="./About-img/Welcome_Pic.jpg"
+              src="./About-img/img3.jpg"
               alt="About us"
             />
           </div>
@@ -52,15 +52,15 @@ const About = () => {
           <div className="lg:w-1/2 px-4">
             <img
               className="w-full rounded-lg shadow-lg"
-              src="./About-img/our_vision_pic.jpg"
+              src="./About-img/img2.jpg"
               alt="About us"
             />
           </div>
           <div className="lg:w-1/2 px-4 mt-6 lg:mt-0">
-            <h3 className="text-2xl  md:text-3xl font-bold text-gray-800">
+            <h3 className="text-3xl  md:text-4xl font-bold text-black">
               Our Vision
             </h3>
-            <p className="mt-4 text-md md:text-lg text-gray-600 leading-relaxed font-semibold">
+            <p className="mt-4 text-md md:text-lg text-black leading-relaxed font-semibold">
               Our mission is to create a world where everyone has access to basic human rights, education, healthcare, and opportunities for sustainable livelihoods. We envision empowered communities working together to overcome poverty, injustice, and environmental degradation, fostering a global society built on dignity, equality, and compassion.
             </p>
           </div>
