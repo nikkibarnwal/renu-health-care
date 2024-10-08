@@ -70,7 +70,7 @@ useEffect(() => {
               Empowering Communities <br />
               <span style={{ fontWeight: 700 ,fontSize: '36px',}}>Through Health & Social Care</span>
             </h1>
-            <p className="text-gray-900" style={{  fontWeight: 600, fontSize: '16px', lineHeight: '20px' }}>
+            <p className="text-black" style={{  fontWeight: 500, fontSize: '16px', lineHeight: '20px' }}>
               At RenuHealthcare, we provide accessible healthcare, engage in impactful Social work, and offer valuable internship opportunities to build a healthier, stronger future for all.
             </p>
             <button
@@ -120,10 +120,10 @@ useEffect(() => {
 
           {/* Right Column: Text Content */}
           <div className="flex flex-col justify-center space-y-4">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug text-gray-900" style={{  fontWeight: 700,fontSize: '36px' }}>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug text-black" style={{  fontWeight: 700,fontSize: '36px' }}>
               About us: Education and Growth
             </h2>
-            <p className="text-gray-900" style={{  fontWeight: 600, fontSize: '16px', lineHeight: '20px' }}>
+            <p className="text-black" style={{  fontWeight: 600, fontSize: '16px', lineHeight: '20px' }}>
             Our mission is to empower underprivileged communities through education and sustainable development. We believe that every individual deserves access to quality education, which serves as a powerful tool for personal and community transformation. By providing resources, training, and support, we aim to cultivate skills and knowledge that enable individuals to improve their living conditions and achieve their full potential. Through sustainable practices, we strive to create lasting change that benefits not just individuals, but entire communities.
             </p>
             <br />
@@ -203,7 +203,7 @@ useEffect(() => {
           {/* Content on the Right */}
           <div className="w-full md:w-1/2 md:pl-4">
             <h2 className="text-3xl font-bold mb-4">Our Impactful Programs & Events</h2>
-            <p className="text-gray-600 mb-6 text-justify">
+            <p className="text-black mb-6 text-justify" style={{  fontWeight: 500, fontSize: '16px', lineHeight: '20px' }}>
               Join RenuHealthcare in making a difference through healthcare camps, community outreach, and internship opportunities. Be part of the change that uplifts lives and strengthens communities.
             </p>
             {/* Two Sub-Sections */}
