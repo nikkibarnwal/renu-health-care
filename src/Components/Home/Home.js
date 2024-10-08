@@ -275,14 +275,14 @@ useEffect(() => {
 
             <div>
               <h4 className="text-xl font-semibold mb-2">2. Does RenuHealthcare offer internship opportunities?</h4>
-              <p className="text-gray-600 text-justify"style={{  fontWeight: 540, fontSize: '16px', lineHeight: '20px' }}>>
+              <p className="text-gray-600 text-justify"style={{  fontWeight: 540, fontSize: '16px', lineHeight: '20px' }}>
                 A: Yes! We offer internships in various sectors including healthcare services, project management, and social work. These internships are designed to provide practical experience and personal growth.
               </p>
             </div>
 
             <div>
               <h4 className="text-xl font-semibold mb-2">3. How can I get involved in the social activities conducted by RenuHealthcare?</h4>
-              <p className="text-gray-600 text-justify"style={{  fontWeight: 540, fontSize: '16px', lineHeight: '20px' }}>>
+              <p className="text-gray-600 text-justify"style={{  fontWeight: 540, fontSize: '16px', lineHeight: '20px' }}>
                 A: You can participate by volunteering in our healthcare camps, community clean-up drives, and educational programs. Visit our 'Get involved' page to learn more about upcoming activities.
               </p>
             </div>
