@@ -16,44 +16,48 @@ import Error from "./Components/Error/Error";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const router = createBrowserRouter([
   {
-    
-    path : "/",
-    element:<App/>,
-    children : [
+    path: "/",
+    element: <App />,
+    children: [
       {
-        path:"",
-        element:<Home/>
+        path: "",
+        element: <Home />,
       },
       {
-        path:"About",
-        element:<About/>
+        path: "About",
+        element: <About />,
       },
       {
-        path:"Donate",
-        element:<Donate/>
-      },{
-        path:"Gallery",
-        element:<Gallery/>
-      },{
-        path:"Events",
-        element:<Events/>
-      },{
-        path:"Contact",
-        element:<Contact/>
-      },{
-        path:"Login",
-        element:<Login/>
+        path: "Donate",
+        element: <Donate />,
       },
       {
-        path:"Signup",
-        element:<Signup/>
-      },{
-        path:"*",
-        element:<Error/>
-      }
-    ]
-  }
-])
+        path: "Gallery",
+        element: <Gallery />,
+      },
+      {
+        path: "Events",
+        element: <Events />,
+      },
+      {
+        path: "Contact",
+        element: <Contact />,
+      },
+      {
+        path: "Login",
+        element: <Login />,
+      },
+      {
+        path: "Signup",
+        element: <Signup />,
+      },
+      {
+        path: "*",
+        element: <Error />,
+      },
+    ],
+  },
+]);
 
 root.render(
   <React.StrictMode>
