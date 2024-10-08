@@ -70,7 +70,7 @@ useEffect(() => {
               Empowering Communities <br />
               <span style={{ fontWeight: 700 ,fontSize: '36px',}}>Through Health & Social Care</span>
             </h1>
-            <p className="text-black" style={{  fontWeight: 500, fontSize: '16px', lineHeight: '20px' }}>
+            <p className="text-gray-800" style={{  fontWeight: 550, fontSize: '16px', lineHeight: '20px' }}>
               At RenuHealthcare, we provide accessible healthcare, engage in impactful Social work, and offer valuable internship opportunities to build a healthier, stronger future for all.
             </p>
             <button
@@ -123,7 +123,7 @@ useEffect(() => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug text-black" style={{  fontWeight: 700,fontSize: '36px' }}>
               About us: Education and Growth
             </h2>
-            <p className="text-black" style={{  fontWeight: 600, fontSize: '16px', lineHeight: '20px' }}>
+            <p className="text-gray-800" style={{  fontWeight: 550, fontSize: '16px', lineHeight: '20px' }}>
             Our mission is to empower underprivileged communities through education and sustainable development. We believe that every individual deserves access to quality education, which serves as a powerful tool for personal and community transformation. By providing resources, training, and support, we aim to cultivate skills and knowledge that enable individuals to improve their living conditions and achieve their full potential. Through sustainable practices, we strive to create lasting change that benefits not just individuals, but entire communities.
             </p>
             <br />
@@ -203,7 +203,7 @@ useEffect(() => {
           {/* Content on the Right */}
           <div className="w-full md:w-1/2 md:pl-4">
             <h2 className="text-3xl font-bold mb-4">Our Impactful Programs & Events</h2>
-            <p className="text-black mb-6 text-justify" style={{  fontWeight: 500, fontSize: '16px', lineHeight: '20px' }}>
+            <p className="text-gray-800 mb-6 text-justify" style={{  fontWeight: 550, fontSize: '16px', lineHeight: '20px' }}>
               Join RenuHealthcare in making a difference through healthcare camps, community outreach, and internship opportunities. Be part of the change that uplifts lives and strengthens communities.
             </p>
             {/* Two Sub-Sections */}
@@ -217,7 +217,7 @@ useEffect(() => {
                 />
                 <div className="flex-1">
                   <h3 className="text-xl font-bold mb-2">Health & Wellness Camps</h3>
-                  <p className="text-gray-600 text-justify">
+                  <p className="text-gray-800 text-justify"style={{  fontWeight: 550, fontSize: '16px', lineHeight: '20px' }}>
                     These camps are designed to promote preventive care and raise awareness about common health issues.
                   </p>
                 </div>
@@ -232,7 +232,7 @@ useEffect(() => {
                 />
                 <div className="flex-1">
                   <h3 className="text-xl font-bold mb-2">Community Health Awareness Drives</h3>
-                  <p className="text-gray-600 text-justify">
+                  <p className="text-gray-800 text-justify"style={{  fontWeight: 550, fontSize: '16px', lineHeight: '20px' }}>
                     Through our awareness drives, we educate communities on topics such as hygiene, nutrition, mental health, and chronic disease management.
                   </p>
                 </div>
@@ -249,7 +249,7 @@ useEffect(() => {
       <div className="max-w-[1440px] container mx-auto">
         <div className="text-center mb-8">
           <h3 className="text-3xl font-bold mb-4">FAQ</h3>
-          <p className="text-gray-600">
+          <p className="text-gray-800"style={{  fontWeight: 550, fontSize: '16px', lineHeight: '20px' }}>
             Your questions answered! Explore how RenuHealthcare is making a difference in healthcare, community service, and internship opportunities.
           </p>
         </div>
@@ -268,21 +268,21 @@ useEffect(() => {
           <div className="w-full md:w-1/2 space-y-6">
             <div>
               <h4 className="text-xl font-semibold mb-2">1. What services does RenuHealthcare provide?</h4>
-              <p className="text-gray-600 text-justify">
+              <p className="text-gray-800 text-justify"style={{  fontWeight: 540, fontSize: '16px', lineHeight: '20px' }}>
                 A: RenuHealthcare focuses on offering accessible healthcare services, conducting community health outreach programs, and providing hands-on internship experiences for students and young professionals.
               </p>
             </div>
 
             <div>
               <h4 className="text-xl font-semibold mb-2">2. Does RenuHealthcare offer internship opportunities?</h4>
-              <p className="text-gray-600 text-justify">
+              <p className="text-gray-600 text-justify"style={{  fontWeight: 540, fontSize: '16px', lineHeight: '20px' }}>>
                 A: Yes! We offer internships in various sectors including healthcare services, project management, and social work. These internships are designed to provide practical experience and personal growth.
               </p>
             </div>
 
             <div>
               <h4 className="text-xl font-semibold mb-2">3. How can I get involved in the social activities conducted by RenuHealthcare?</h4>
-              <p className="text-gray-600 text-justify">
+              <p className="text-gray-600 text-justify"style={{  fontWeight: 540, fontSize: '16px', lineHeight: '20px' }}>>
                 A: You can participate by volunteering in our healthcare camps, community clean-up drives, and educational programs. Visit our 'Get involved' page to learn more about upcoming activities.
               </p>
             </div>
