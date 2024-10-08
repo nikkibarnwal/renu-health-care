@@ -137,39 +137,54 @@ useEffect(() => {
 
 
       <div>
-    {/* Carusel */}
-    <div className="relative w-full max-w-[1240px] h-[320px] overflow-visible mx-auto flex justify-center">
-      {/* Loop through slides */}
-      {slides.map((slide, index) => (
-        <div
-          key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            index === currentSlide ? "opacity-100" : "opacity-0"
-          }`}
-        >
-          {/* Background Image */}
-          <img
-            src={slide.img}
-            alt={`Slide ${index + 1}`}
-            className="w-full h-full object-cover rounded-lg"
-          />
-          {/* Overlay with Gradient and Text */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/15 to-transparent flex items-center px-5 py-5 md:px-8 lg:px-12 gap-4 lg:gap-5 rounded-xl">
-            <div className="text-left">
-              <h1 className="text-white font-semibold mb-2 text-3xl md:text-4xl lg:text-5xl">
-                {slide.heading}
-              </h1>
-              <p className="text-white mb-4 opacity-80 max-w-xs max-w-md">
-                {slide.para}
-              </p>
-              <button className="bg-white text-black px-4 py-2 rounded-xl text-sm md:text-base">
-                {slide.button}
-              </button>
-            </div>
+{/* Carousel */}
+<div className="relative w-full max-w-[1240px] h-[320px] overflow-hidden mx-auto flex items-center">
+  <div
+    className="flex flex-row w-full transition-transform duration-1000 ease-in-out"
+    style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+  >
+    {/* Slides */}
+    {slides.map((slide, index) => (
+      <div key={index} className="min-w-full h-[320px] relative">
+        {/* Background Image */}
+        <img
+          src={slide.img}
+          alt={`Slide ${index + 1}`}
+          className="w-full h-full object-cover rounded-lg"
+        />
+        {/* Overlay with Gradient and Text */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/15 to-transparent flex items-center px-5 py-5 md:px-8 lg:px-12 gap-4 lg:gap-5 rounded-xl">
+          <div className="text-left">
+            <h1 className="text-white font-semibold mb-2 text-3xl md:text-4xl lg:text-5xl">
+              {slide.heading}
+            </h1>
+            <p className="text-white mb-4 opacity-80 max-w-xs max-w-md">
+              {slide.para}
+            </p>
+            <button className="bg-white text-black px-4 py-2 rounded-xl text-sm md:text-base">
+              {slide.button}
+            </button>
           </div>
         </div>
-      ))}
-    </div> 
+      </div>
+    ))}
+  </div>
+</div>
+
+{/* 3 Dot Navigation placed below the image */}
+<div className="relative mt-6 flex justify-center space-x-2">
+  {slides.map((_, index) => (
+    <button
+      key={index}
+      className={`h-3 w-3 rounded-full ${
+        currentSlide === index ? "bg-green-700" : "bg-gray-500"
+      }`}
+      onClick={() => setCurrentSlide(index)}
+    />
+  ))}
+</div>
+
+
 
     {/*Event Section */}
     <section className="bg-white py-4 px-12">
@@ -184,6 +199,7 @@ useEffect(() => {
               className="w-full h-auto object-cover rounded-lg"
             />
           </div>
+          
           {/* Content on the Right */}
           <div className="w-full md:w-1/2 md:pl-4">
             <h2 className="text-3xl font-bold mb-4">Our Impactful Programs & Events</h2>
