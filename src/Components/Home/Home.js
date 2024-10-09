@@ -42,20 +42,25 @@ const HomePage = () => {
     button: 'Be a Volunteer',
   },
 ];
+
+
 const [currentSlide, setCurrentSlide] = useState(0);
 
-// Function to move to the next slide
-const nextSlide = () => {
-  setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
-};
+  const prevSlide = (currentSlide - 1 + slides.length) % slides.length;
+  const next = (currentSlide + 1) % slides.length;
 
-// Automatic slide transition
-useEffect(() => {
-  const interval = setInterval(() => {
-    nextSlide();
-  }, 3000); // Slide every 3 seconds
-  return () => clearInterval(interval);
-}, []);
+  // Function to move to the next slide
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  };
+
+  // Automatic slide transition
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000); // Slide every 3 seconds
+    return () => clearInterval(interval);
+  }, []);
 
 
   return (
@@ -137,16 +142,19 @@ useEffect(() => {
 
 
       <div>
-{/* Carousel */}
-<div className="relative w-full max-w-[1240px] h-[320px] overflow-hidden mx-auto flex items-center">
+      <div className="relative w-full max-w-[1440px] h-[470px] overflow-hidden mx-auto">
+  {/* Carousel */}
   <div
-    className="flex flex-row w-full transition-transform duration-1000 ease-in-out"
-    style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+    className="flex transition-transform duration-700 ease-in-out"
+    style={{ transform: `translateX(-${currentSlide * 85}%)` }} // Adjusted to 85% for partial visibility
   >
-    {/* Slides */}
+    {/* Slide Items */}
     {slides.map((slide, index) => (
-      <div key={index} className="min-w-full h-[320px] relative">
-        {/* Background Image */}
+      <div
+        key={index}
+        className="flex-none w-[85%] h-[400px] relative mx-2"
+        style={{ flex: '0 0 85%' }} // Each slide takes 85% width to leave space for the next image
+      >
         <img
           src={slide.img}
           alt={`Slide ${index + 1}`}
@@ -169,20 +177,23 @@ useEffect(() => {
       </div>
     ))}
   </div>
-</div>
 
-{/* 3 Dot Navigation placed below the image */}
-<div className="relative mt-6 flex justify-center space-x-2">
+ {/* Dot Navigation */}
+<div className="relative mt-5 flex justify-center space-x-2">
   {slides.map((_, index) => (
     <button
       key={index}
-      className={`h-3 w-3 rounded-full ${
-        currentSlide === index ? "bg-green-700" : "bg-gray-500"
+      className={`h-4 w-4 rounded-full transition-all duration-300 ease-in-out ${
+        currentSlide === index ? 'bg-green-700' : 'bg-gray-400'
       }`}
       onClick={() => setCurrentSlide(index)}
+      style={{ outline: currentSlide === index ? '2px solid white' : 'none' }} // Optional: Adds an outline to the active dot
     />
   ))}
 </div>
+
+</div>
+
 
 
 
