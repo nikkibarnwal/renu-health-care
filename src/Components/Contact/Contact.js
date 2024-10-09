@@ -80,7 +80,7 @@ const ContactUs = () => {
   <ToastContainer />
 
   {/* Hero Section */}
-  <div className="flex flex-col justify-center items-center w-full px-4 md:px-0">
+  <div className="flex flex-col justify-center items-center w-full px-4 md:px-0 ">
   <h3 className="text-[32px] md:text-[43px] leading-[40px] md:leading-[63px] text-[#141414] font-poppins font-bold text-center">
     Get in Touch with Us
   </h3>
