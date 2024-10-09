@@ -65,6 +65,58 @@ const [currentSlide, setCurrentSlide] = useState(0);
 
   return (
     <div className="home-page">
+  <div className="relative w-full max-w-[1440px] h-[470px] overflow-hidden mx-auto">
+  {/* Carousel */}
+  <div
+    className="flex transition-transform duration-700 ease-in-out"
+    style={{ transform: `translateX(-${currentSlide * 85}%)` }} // Adjusted to 85% for partial visibility
+  >
+    {/* Slide Items */}
+    {slides.map((slide, index) => (
+      <div
+        key={index}
+        className="flex-none w-[85%] h-[400px] relative mx-2"
+        style={{ flex: '0 0 85%' }} // Each slide takes 85% width to leave space for the next image
+      >
+        <img
+          src={slide.img}
+          alt={`Slide ${index + 1}`}
+          className="w-full h-full object-cover rounded-lg"
+        />
+        {/* Overlay with Gradient and Text */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/15 to-transparent flex items-center px-5 py-5 md:px-8 lg:px-12 gap-4 lg:gap-5 rounded-xl">
+          <div className="text-left">
+            <h1 className="text-white font-semibold mb-2 text-3xl md:text-4xl lg:text-5xl">
+              {slide.heading}
+            </h1>
+            <p className="text-white mb-4 opacity-80 max-w-xs max-w-md">
+              {slide.para}
+            </p>
+            <button className="bg-white text-black px-4 py-2 rounded-xl text-sm md:text-base">
+              {slide.button}
+            </button>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+
+ {/* Dot Navigation */}
+<div className="relative mt-5 flex justify-center space-x-2">
+  {slides.map((_, index) => (
+    <button
+      key={index}
+      className={`h-4 w-4 rounded-full transition-all duration-300 ease-in-out ${
+        currentSlide === index ? 'bg-green-700' : 'bg-gray-400'
+      }`}
+      onClick={() => setCurrentSlide(index)}
+      style={{ outline: currentSlide === index ? '2px solid white' : 'none' }} // Optional: Adds an outline to the active dot
+    />
+  ))}
+</div>
+
+</div>
+
       {/* Empowering Communities Section */}
       <section className="bg-white py-16">
         <div className="container mx-auto px-6 md:px-16 lg:px-24 grid grid-cols-1 md:grid-cols-2 gap-12">
@@ -142,57 +194,7 @@ const [currentSlide, setCurrentSlide] = useState(0);
 
 
       <div>
-      <div className="relative w-full max-w-[1440px] h-[470px] overflow-hidden mx-auto">
-  {/* Carousel */}
-  <div
-    className="flex transition-transform duration-700 ease-in-out"
-    style={{ transform: `translateX(-${currentSlide * 85}%)` }} // Adjusted to 85% for partial visibility
-  >
-    {/* Slide Items */}
-    {slides.map((slide, index) => (
-      <div
-        key={index}
-        className="flex-none w-[85%] h-[400px] relative mx-2"
-        style={{ flex: '0 0 85%' }} // Each slide takes 85% width to leave space for the next image
-      >
-        <img
-          src={slide.img}
-          alt={`Slide ${index + 1}`}
-          className="w-full h-full object-cover rounded-lg"
-        />
-        {/* Overlay with Gradient and Text */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/15 to-transparent flex items-center px-5 py-5 md:px-8 lg:px-12 gap-4 lg:gap-5 rounded-xl">
-          <div className="text-left">
-            <h1 className="text-white font-semibold mb-2 text-3xl md:text-4xl lg:text-5xl">
-              {slide.heading}
-            </h1>
-            <p className="text-white mb-4 opacity-80 max-w-xs max-w-md">
-              {slide.para}
-            </p>
-            <button className="bg-white text-black px-4 py-2 rounded-xl text-sm md:text-base">
-              {slide.button}
-            </button>
-          </div>
-        </div>
-      </div>
-    ))}
-  </div>
-
- {/* Dot Navigation */}
-<div className="relative mt-5 flex justify-center space-x-2">
-  {slides.map((_, index) => (
-    <button
-      key={index}
-      className={`h-4 w-4 rounded-full transition-all duration-300 ease-in-out ${
-        currentSlide === index ? 'bg-green-700' : 'bg-gray-400'
-      }`}
-      onClick={() => setCurrentSlide(index)}
-      style={{ outline: currentSlide === index ? '2px solid white' : 'none' }} // Optional: Adds an outline to the active dot
-    />
-  ))}
-</div>
-
-</div>
+    
 
 
 
