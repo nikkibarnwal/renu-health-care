@@ -6,8 +6,15 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import CallTwoToneIcon from '@mui/icons-material/CallTwoTone';
 import RoomTwoToneIcon from '@mui/icons-material/RoomTwoTone';
+import { useState,useEffect} from "react";
+
+
 
 const ContactUs = () => {
+  const [phone, setPhone] = useState('');
+  const [isValid, setIsValid] = useState(true);
+  const [typingTimeout, setTypingTimeout] = useState(null);
+
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -34,9 +41,42 @@ const ContactUs = () => {
     event.target.reset();
   };
 
+  const handlePhoneChange = (e) => {
+    const value = e.target.value;
+    setPhone(value);
+
+    // Immediate validation for the first digit
+    if (value.length === 1 && !/^[6-9]$/.test(value)) {
+      setIsValid(false);
+    } else {
+      // Clear timeout on each input to debounce validation
+      if (typingTimeout) {
+        clearTimeout(typingTimeout);
+      }
+
+      // Set a new timeout for debounced validation after 1.5 seconds
+      const newTimeout = setTimeout(() => {
+        // Full validation for the entire phone number
+        const phonePattern = /^[6-9]\d{9}$/;
+        setIsValid(phonePattern.test(value));
+      }, 1500);
+
+      setTypingTimeout(newTimeout);
+    }
+  };
+
+  useEffect(() => {
+    // Cleanup timeout on unmount to avoid memory leaks
+    return () => {
+      if (typingTimeout) {
+        clearTimeout(typingTimeout);
+      }
+    };
+  }, [typingTimeout]);
+
   return (
     <>
-    <div className=" m-auto bg-[#FAFAFA]">
+    <div className=" mb-0 ml-0 mr-0 mt-3 bg-[#FAFAFA]">
   <ToastContainer />
 
   {/* Hero Section */}
@@ -60,7 +100,7 @@ const ContactUs = () => {
         <div className="flex flex-row w-full gap-[12px]">
           <div className="w-1/2">
             <label htmlFor="first-name" className="block text-[#252525] font-Inter font-medium mb-2" style={{ lineHeight: '20px', height: '16px' }}>
-              First Name
+              First Name <span className="text-red-500">*</span>
             </label>
             <input
               id="first-name"
@@ -73,7 +113,7 @@ const ContactUs = () => {
           </div>
           <div className="w-1/2">
             <label htmlFor="last-name" className="block text-[#252525] font-Inter font-medium mb-2" style={{ lineHeight: '20px', height: '16px' }}>
-              Last Name
+              Last Name <span className="text-red-500">*</span>
             </label>
             <input
               id="last-name"
@@ -89,7 +129,7 @@ const ContactUs = () => {
         {/* Email Input */}
         <div className="w-full">
           <label htmlFor="email" className="block text-[#252525] font-Inter font-medium mb-2" style={{ lineHeight: '20px', height: '16px' }}>
-            Email
+            Email <span className="text-red-500">*</span>
           </label>
           <input
             id="email"
@@ -100,24 +140,40 @@ const ContactUs = () => {
             required
           />
         </div>
+        {/* Phone */}
         <div className="w-full">
-          <label htmlFor="email" className="block text-[#252525] font-Inter font-medium mb-2" style={{ lineHeight: '20px', height: '16px' }}>
-            Phone
-          </label>
-          <input
-            id="email"
-            name="email"
-            className="w-full h-[45px] p-[12px] bg-[#fafafa] border-1 border-[#ADADAD] rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
-            type="number"
-            placeholder="+91 742934****"
-            required
-          />
-        </div>
+      <label htmlFor="phone" className="block text-[#252525] font-Inter font-medium mb-2" style={{ lineHeight: '20px', height: '16px' }}>
+        Phone <span className="text-red-500">*</span>
+      </label>
+      <div className={`flex p-1 border-1 rounded-md ${isValid ? 'border-[#ADADAD]' : 'border-red-500'}`}>
+        <select id="country-code" className="px-1 py-1 focus:outline-none">
+          <option value="+91">IND</option>
+          <option value="+1">USA</option>
+          <option value="+44">UK</option>
+        </select>
+        <input
+          id="phone"
+          name="phone"
+          className={`w-full h-[45px] p-[12px] bg-[#fafafa] focus:outline-none transition duration-300 ${
+            isValid ? 'focus:ring-blue-500' : 'focus:ring-red-500'
+          }`}
+          type="tel"
+          placeholder="+91 742934****"
+          value={phone}
+          onChange={handlePhoneChange}
+          maxLength="10"
+          required
+        />
+      </div>
+      {!isValid && (
+        <p className="text-red-500 text-sm mt-1">Please enter a valid 10-digit phone number starting with 6, 7, 8, or 9</p>
+      )}
+    </div>
               
         {/* Message Textarea */}
         <div className="w-full">
           <label htmlFor="message" className="block text-[#252525] font-Inter font-medium mb-2" style={{ lineHeight: '20px', height: '16px' }}>
-            Message
+            Message <span className="text-red-500">*</span>
           </label>
           <textarea
             id="message"
@@ -160,41 +216,63 @@ const ContactUs = () => {
   <h3  className="block text-[#252525] font-Inter font-medium mb-2" style={{ lineHeight: '20px', height: '16px' }}>Chat with us</h3>
     <p className="text-sm mb-2">Speak to our friendly team via Chat</p>
     
-    <p className="flex items-center justify-start gap-2 text-sm mb-2 underline font-medium font-Poppins">
-    <MailOutlineIcon sx={{ color: '#24774F', fontSize:"20px" }} />
+    <div>
+  <p 
+    className="flex items-center justify-start gap-2 text-sm mb-2 underline font-medium font-Poppins transition-transform duration-200 hover:scale-105"
+    onClick={() => window.open('mailto:example@example.com')}
+    style={{ cursor: 'pointer' }}  // Makes it look clickable
+  >
+    <MailOutlineIcon sx={{ color: '#24774F', fontSize: "20px" }} />
+    Message us on email
+  </p>
 
-      Message us on email
-    </p>
+  <p 
+    className="flex items-center justify-start gap-2 text-sm mb-2 underline font-medium font-Poppins transition-transform duration-200 hover:scale-105"
+    onClick={() => window.open('https://www.instagram.com/yourusername', '_blank')}
+    style={{ cursor: 'pointer' }}  // Makes it look clickable
+  >
+    <InstagramIcon sx={{ color: '#24774F', fontSize: "20px" }} />
+    Live chat on Instagram
+  </p>
 
-    <p className="flex items-center justify-start gap-2 text-sm mb-2 underline font-medium font-Poppins">
-    <InstagramIcon sx={{ color: '#24774F', fontSize:"20px" }} />
-
-      Live chat on Instagram
-    </p>
-    <p className="flex items-center justify-start gap-2 text-sm mb-2 underline font-medium font-Poppins">
-    <LinkedInIcon sx={{ color: '#24774F', fontSize:"20px" }} />
-
+  <p 
+    className="flex items-center justify-start gap-2 text-sm mb-2 underline font-medium font-Poppins transition-transform duration-200 hover:scale-105"
+    onClick={() => window.open('https://www.linkedin.com/in/yourprofile', '_blank')}
+    style={{ cursor: 'pointer' }}  // Makes it look clickable
+  >
+    <LinkedInIcon sx={{ color: '#24774F', fontSize: "20px" }} />
     Connect with us on LinkedIn
-    </p>
+  </p>
+</div>
+
   </div>
 
 </div>
   <div className="flex flex-col w-full sm:w-1/2 ">
     <h3  className="block text-[#252525] font-Inter font-medium mb-2" style={{ lineHeight: '20px', height: '16px' }}>Visit us</h3>
     <p className="text-sm mb-2">Chat with us in person in our office</p>
-    <p className="flex items-center justify-start gap-2 text-sm mb-2 underline font-medium font-Poppins">
-    <RoomTwoToneIcon sx={{ color: '#24774F', fontSize:"20px" }} />
-    Gurugram,haryana-122503,India</p>
+    <p 
+    className="flex items-center justify-start gap-2 text-sm mb-2 underline font-medium font-Poppins transition-transform duration-200 hover:scale-105"
+    onClick={() => window.open('https://www.google.com/maps/search/?api=1&query=Gurugram,Haryana,India', '_blank')}
+    style={{ cursor: 'pointer' }}
+  >
+    <RoomTwoToneIcon sx={{ color: '#24774F', fontSize: "20px" }} />
+    Gurugram, Haryana-122503, India
+  </p>
   </div>
 </div>
   <div>
   <h3  className="block text-[#252525] font-Inter font-medium mb-2 mt-6" style={{ lineHeight: '20px', height: '16px' }}>Call Us</h3>
     <p className="text-sm mb-2">Call our team Mon.En from 8am to 5pm.</p>
     
-    <p className="flex items-center justify-start gap-2 text-sm mb-2 underline font-poppins font-medium ">
-      <CallTwoToneIcon sx={{ color: '#24774F', fontSize:"20px" }} />
-      +91-9671457366
-    </p>
+    <p 
+    className="flex items-center justify-start gap-2 text-sm mb-2 underline font-medium font-Poppins transition-transform duration-200 hover:scale-105"
+    onClick={() => window.open('tel:+919671457366')}
+    style={{ cursor: 'pointer' }}
+  >
+    <CallTwoToneIcon sx={{ color: '#24774F', fontSize: "20px" }} />
+    +91-9671457366
+  </p>
   </div>
 </div>
 
