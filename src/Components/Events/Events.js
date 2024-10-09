@@ -14,18 +14,18 @@ const Event = () => {
           className="mb-4 contact-hero flex items-center justify-center rounded-lg bg-cover bg-center bg-no-repeat w-full h-[240px] sm:h-[447px] md:h-[500px]"
           style={{
             backgroundImage: `url("/Events/event-img.png")`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
         >
-          <h1 className="event-heading text-3xl sm:text-5xl lg:text-6xl font-semibold text-white">
-            Events
-          </h1>
+          <h1 className="event-heading text-3xl sm:text-5xl lg:text-6xl font-semibold text-white"></h1>
         </div>
 
         {/* Header Section */}
         <header className="text-center py-8 bg-white px-4 sm:px-6 lg:px-8">
-          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">Events</h1>
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-2">
+            Events
+          </h1>
           <p className="text-base sm:text-lg lg:text-xl text-gray-700">
             Stay updated on events and initiatives, from health camps to
             community outreach programs and internships. Join us as we bring
