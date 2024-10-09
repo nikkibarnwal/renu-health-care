@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react';
-import './Gallery.css';
-import Herosection from './herosection';
-import Grid from './grid';
-import Band from './band';
+import React, { useEffect } from "react";
+import "./Gallery.css";
+import Herosection from "./herosection";
+import Grid from "./grid";
 
 const Gallery = () => {
   useEffect(() => {
@@ -11,10 +10,9 @@ const Gallery = () => {
 
   return (
     <>
-    <div className='sm:w-11/12 bg-gray-100 m-auto'>
-      <Herosection />
-      <Grid />
-      <Band />
+      <div className="sm:w-11/12 bg-[#E1F0DA] m-auto">
+        <Herosection />
+        <Grid />
       </div>
     </>
   );

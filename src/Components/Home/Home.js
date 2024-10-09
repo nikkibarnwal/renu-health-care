@@ -1,185 +1,438 @@
-import gsap from "gsap";
-import { useEffect, useRef } from "react";
-import React from "react";
+import React, { useState, useEffect } from "react";
+import {
+  CiLocationOn,
+  CiMail,
+  CiMicrophoneOn,
+  CiMobile1,
+  CiMobile2,
+  CiPhone,
+} from "react-icons/ci";
+import { IoCall } from "react-icons/io5";
+const HomePage = () => {
+  const images = [
+    "/HomepageImages/Corousel/Home9.jpg",
+    "/HomepageImages/Corousel/Home10.jpg",
+    "/HomepageImages/Corousel/Home11.jpg",
+    "/HomepageImages/Corousel/Home12.jpg",
+  ].filter((image) => image);
 
-const Home = () => {
-  const carouselRef = useRef(null); // to ref particular div
-  const volunteerCarouselRef = useRef(null);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  // GSAP image carousel animation
   useEffect(() => {
-    const images = carouselRef.current.children;
-    const timeline = gsap.timeline({ repeat: -1 });
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
 
-    gsap.set(images, { opacity: 0 });
-    gsap.set(images[0], { opacity: 1 });
+    return () => clearInterval(interval);
+  }, [images.length]);
 
-    for (let i = 0; i < images.length; i++) {
-      const nextImage = images[(i + 1) % images.length];
-      timeline.to(images[i], { opacity: 0, duration: 1, delay: 2 });
-      timeline.to(nextImage, { opacity: 1, duration: 1 });
-    }
-  }, []);
+  const slides = [
+    {
+      img: "./HomePageIMGs/Carousel/Screenshot 2024-10-06 112119.png",
+      heading: "Support Our Cause",
+      para: "Your contribution can change lives. Donate now to support our healthcare and education initiatives.",
+      button: "Donate Now",
+    },
+    {
+      img: "./HomePageIMGs/Carousel/Screenshot 2024-10-06 112433.png",
+      heading: "Become an Intern",
+      para: "Join our team and make an impact through healthcare or education programs.",
+      button: "Apply Now",
+    },
+    {
+      img: "./HomePageIMGs/Carousel/Screenshot 2024-10-06 112353.png",
+      heading: "Join as a Volunteer",
+      para: "Contribute your time and skills to support our healthcare and education programs. Be a part of positive change today!",
+      button: "Be a Volunteer",
+    },
+  ];
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-  // GSAP volunteer carousel animation
+  // Function to move to the next slide
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
+  };
+
+  // Automatic slide transition
   useEffect(() => {
-    const images = volunteerCarouselRef.current.children;
-    const timeline = gsap.timeline({ repeat: -1 });
-
-    gsap.set(images, { opacity: 0 });
-    gsap.set(images[0], { opacity: 1 });
-
-    for (let i = 0; i < images.length; i++) {
-      const nextImage = images[(i + 1) % images.length];
-      timeline.to(images[i], { opacity: 0, duration: 1, delay: 2 });
-      timeline.to(nextImage, { opacity: 1, duration: 1 });
-    }
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000); // Slide every 3 seconds
+    return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="bg-gray-100 pb-10">
-      {/* Main carousel section */}
-      <div className="w-11/12 mx-auto my-6">
-        <div
-          ref={carouselRef}
-          className="h-64 sm:h-96 md:h-[40rem] relative overflow-hidden rounded-lg shadow-lg bg-gradient-to-r from-blue-500 via-green-600 to-purple-700"
-        >
-          {[...Array(8).keys()].map((idx) => (
-            <img
-              key={idx}
-              src={`./HomepageImages/Corousel/Home${idx + 1}.jpg`}
-              alt={`slide-${idx}`}
-              className="absolute inset-0 object-cover w-full h-full opacity-0 transition-opacity duration-1000 ease-in-out"
-            />
-          ))}
-        </div>
-      </div>
-
-      {/* Donation, Volunteer, Sponsorship section */}
-      <div className="w-11/12 mx-auto grid gap-8 grid-cols-1 md:grid-cols-3 text-center py-10">
-        {[{
-          title: "Make a Donation",
-          image: "donation.gif",
-          description: "Your donation holds the power to create ripples of hope and transform lives.",
-        },
-        {
-          title: "Become a Volunteer",
-          image: "volunteer.gif",
-          description: "Join hands with us to paint a brighter tomorrow, one act of service at a time.",
-        },
-        {
-          title: "Sponsorship",
-          image: "sponsor.gif",
-          description: "Invest in communities and create a legacy of empowerment and transformation.",
-        }].map((item, idx) => (
-          <div
-            key={idx}
-            className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md transition-transform transform hover:scale-105 hover:shadow-xl"
-          >
-            <img
-              className="w-24 h-24 mb-4 border-4 border-green-600 p-2 rounded-full shadow-lg"
-              src={`./HomepageImages/ThreeSlogans/${item.image}`}
-              alt={item.title}
-            />
-            <h2 className="text-2xl font-semibold mb-2 text-green-500">{item.title}</h2>
-            <p className="text-sm text-gray-600">{item.description}</p>
-          </div>
-        ))}
-      </div>
-
-      {/* Volunteer Ideas Form */}
-      <div className="w-11/12 mx-auto bg-white rounded-lg shadow-lg overflow-hidden my-8">
-        <div className="grid grid-cols-1 md:grid-cols-2">
-          <div className="p-8">
-            <h3 className="text-2xl font-bold mb-4 text-green-500">
-              Share Your Volunteering Ideas
-            </h3>
-            <form
-              className="space-y-4"
-              action="mailto:info@admedusociety.org"
-              method="post"
-              encType="text/plain"
+    <div className="home-page">
+      {/* Empowering Communities Section */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-6 md:px-16 lg:px-24 grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Left Side: Text Content */}
+          <div className="flex flex-col justify-center space-y-6">
+            <h1
+              className="text-black"
+              style={{ fontWeight: 700, fontSize: "36px", lineHeight: "52px" }}
             >
-              <input
-                className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                type="text"
-                name="Name"
-                placeholder="Your Name"
-                required
-              />
-              <input
-                className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                type="email"
-                name="Mail"
-                placeholder="Your Email-ID"
-                required
-              />
-              <textarea
-                className="w-full border border-gray-300 p-3 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"
-                name="Feedback"
-                placeholder="Your Volunteering Ideas"
-                rows="5"
-                required
-              />
-              <div className="flex justify-between">
-                <input
-                  className="bg-green-600 text-white px-6 py-2 rounded-lg cursor-pointer hover:bg-green-500 transition"
-                  type="Submit"
-                  value="Send"
-                />
-                <input
-                  className="bg-red-600 text-white px-6 py-2 rounded-lg cursor-pointer hover:bg-red-700 transition"
-                  type="reset"
-                  value="Reset"
-                />
-              </div>
-            </form>
+              Empowering Communities <br />
+              <span style={{ fontWeight: 700, fontSize: "36px" }}>
+                Through Health & Social Care
+              </span>
+            </h1>
+            <p
+              className="text-gray-800"
+              style={{ fontWeight: 550, fontSize: "16px", lineHeight: "20px" }}
+            >
+              At RenuHealthcare, we provide accessible healthcare, engage in
+              impactful Social work, and offer valuable internship opportunities
+              to build a healthier, stronger future for all.
+            </p>
+            <button
+              className="bg-[#24774F] text-white text-base md:text-lg  hover:bg-green-700 transition duration-300"
+              style={{
+                width: "140px",
+                height: "58px",
+                borderRadius: "10px",
+                paddingTop: "15px",
+                paddingRight: "32px",
+                paddingBottom: "15px",
+                paddingLeft: "32px",
+              }}
+            >
+              Sign Up
+            </button>
           </div>
 
-          <div className="relative h-64 md:h-auto" ref={volunteerCarouselRef}>
-            {[...Array(7).keys()].map((idx) => (
-              <img
-                key={idx}
-                src={`./HomepageImages/volunteerform/volunteer${idx + 1}.jpg`}
-                alt={`volunteer-${idx}`}
-                className="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-1000 ease-in-out"
-              />
+          {/* Right Side: Image Carousel */}
+          <div className="relative h-[400px] overflow-hidden">
+            {/* {images.map((image, index) => ( */}
+            <img
+              src="/HomepageImages/Corousel/Home12.jpg"
+              alt=""
+              className={`rounded-lg shadow-lg object-cover w-full h-full transition-opacity duration-1000 ease-in-out `}
+              style={{ position: "absolute", top: 0, left: 0 }}
+            />
+            {/* ))} */}
+          </div>
+        </div>
+      </section>
+      <br />
+
+      {/* About Us Section */}
+      <section className="bg-white py-16">
+        <div className="container mx-auto px-6 md:px-16 lg:px-24 grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Left Column: Image */}
+          <div>
+            <img
+              src="/HomepageImages/Corousel/Home13.jpg"
+              alt="Education and Growth"
+              className="rounded-lg shadow-lg object-cover w-full h-full"
+            />
+          </div>
+
+          {/* Right Column: Text Content */}
+          <div className="flex flex-col justify-center space-y-4">
+            <h2
+              className="text-3xl md:text-4xl lg:text-5xl font-bold leading-snug text-black"
+              style={{ fontWeight: 700, fontSize: "36px" }}
+            >
+              About us: Education and Growth
+            </h2>
+            <p
+              className="text-gray-800"
+              style={{ fontWeight: 550, fontSize: "16px", lineHeight: "20px" }}
+            >
+              Our mission is to empower underprivileged communities through
+              education and sustainable development. We believe that every
+              individual deserves access to quality education, which serves as a
+              powerful tool for personal and community transformation. By
+              providing resources, training, and support, we aim to cultivate
+              skills and knowledge that enable individuals to improve their
+              living conditions and achieve their full potential. Through
+              sustainable practices, we strive to create lasting change that
+              benefits not just individuals, but entire communities.
+            </p>
+            <br />
+            <a
+              href="#"
+              className="text-blue-400 hover:underline text-base md:text-lg font-medium"
+            >
+              Learn more &gt;
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div>
+        {/* Carousel */}
+        <div className="relative w-full max-w-[1240px] h-[320px] overflow-hidden mx-auto flex items-center">
+          <div
+            className="flex flex-row w-full transition-transform duration-1000 ease-in-out"
+            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          >
+            {/* Slides */}
+            {slides.map((slide, index) => (
+              <div key={index} className="min-w-full h-[320px] relative">
+                {/* Background Image */}
+                <img
+                  src={slide.img}
+                  alt={`Slide ${index + 1}`}
+                  className="w-full h-full object-cover rounded-lg"
+                />
+                {/* Overlay with Gradient and Text */}
+                <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/15 to-transparent flex items-center px-5 py-5 md:px-8 lg:px-12 gap-4 lg:gap-5 rounded-xl">
+                  <div className="text-left">
+                    <h1 className="text-white font-semibold mb-2 text-3xl md:text-4xl lg:text-5xl">
+                      {slide.heading}
+                    </h1>
+                    <p className="text-white mb-4 opacity-80 max-w-xs max-w-md">
+                      {slide.para}
+                    </p>
+                    <button className="bg-white text-black px-4 py-2 rounded-xl text-sm md:text-base">
+                      {slide.button}
+                    </button>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
-      </div>
 
-      {/* Testimonials Section */}
-      <div className="w-11/12 mx-auto bg-gray-100 rounded-lg shadow-lg py-10 my-8">
-        <h2 className="text-3xl font-bold text-center mb-8 text-green-800">What People Are Saying</h2>
-        <div className="flex flex-wrap justify-center gap-8">
-          {[{
-            name: "John Doe",
-            testimonial: "The organization has truly transformed our community. I'm proud to be a part of such a meaningful cause.",
-          },
-          {
-            name: "Jane Smith",
-            testimonial: "Volunteering here has been one of the most rewarding experiences of my life. The team is fantastic!",
-          },
-          {
-            name: "Sam Wilson",
-            testimonial: "A wonderful place to donate and support. Every contribution makes a significant impact.",
-          
-          }].map((testi, idx) => (
-            <div
-              key={idx}
-              className="flex flex-col items-center bg-white p-6 rounded-lg shadow-md w-full md:w-1/3 transition-transform transform hover:scale-105 hover:shadow-xl"
-            >
-             
-              <p className="text-gray-600 mb-2 text-center">{testi.testimonial}</p>
-              <p className="font-semibold text-green-500">{testi.name}</p>
-            </div>
+        {/* 3 Dot Navigation placed below the image */}
+        <div className="relative mt-6 flex justify-center space-x-2">
+          {slides.map((_, index) => (
+            <button
+              key={index}
+              className={`h-3 w-3 rounded-full ${
+                currentSlide === index ? "bg-green-700" : "bg-gray-500"
+              }`}
+              onClick={() => setCurrentSlide(index)}
+            />
           ))}
         </div>
-      </div>
 
+        {/*Event Section */}
+        <section className="bg-white py-4 px-12">
+          <div className="max-w-[1440px] container mx-auto">
+            {/* Main Section with Image and Content */}
+            <div className="flex flex-col md:flex-row items-center mb-12 gap-8 ">
+              {/* Image on the Left */}
+              <div className="w-full md:w-1/2 mb-6 md:mb-0">
+                <img
+                  src=".\HomePageIMGS\cloth-distribution-shuddhi-ngo-india-clidren-women-environment_orig.png"
+                  alt="Impactful Programs"
+                  className="w-full h-auto object-cover rounded-lg"
+                />
+              </div>
+
+              {/* Content on the Right */}
+              <div className="w-full md:w-1/2 md:pl-4">
+                <h2 className="text-3xl font-bold mb-4">
+                  Our Impactful Programs & Events
+                </h2>
+                <p
+                  className="text-gray-800 mb-6 text-justify"
+                  style={{
+                    fontWeight: 550,
+                    fontSize: "16px",
+                    lineHeight: "20px",
+                  }}
+                >
+                  Join RenuHealthcare in making a difference through healthcare
+                  camps, community outreach, and internship opportunities. Be
+                  part of the change that uplifts lives and strengthens
+                  communities.
+                </p>
+                {/* Two Sub-Sections */}
+                <div className="space-y-8">
+                  {/* First Sub-Section */}
+                  <div className="flex flex-row md:flex-row items-start gap-4">
+                    <img
+                      src=".\HomePageIMGS\d00d765b65.png"
+                      alt="Health & Wellness Camps"
+                      className="w-[100px] md:w-[150px] h-[120px] object-cover rounded-lg"
+                    />
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-2">
+                        Health & Wellness Camps
+                      </h3>
+                      <p
+                        className="text-gray-800 text-justify"
+                        style={{
+                          fontWeight: 550,
+                          fontSize: "16px",
+                          lineHeight: "20px",
+                        }}
+                      >
+                        These camps are designed to promote preventive care and
+                        raise awareness about common health issues.
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Second Sub-Section */}
+                  <div className="flex flex-row md:flex-row items-start gap-4">
+                    <img
+                      src=".\HomePageIMGS\840600-39889-mxxltjjonz-1497420426.png"
+                      alt="Community Health Awareness Drives"
+                      className="w-[100px] md:w-[150px] h-[120px] object-cover rounded-lg"
+                    />
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold mb-2">
+                        Community Health Awareness Drives
+                      </h3>
+                      <p
+                        className="text-gray-800 text-justify"
+                        style={{
+                          fontWeight: 550,
+                          fontSize: "16px",
+                          lineHeight: "20px",
+                        }}
+                      >
+                        Through our awareness drives, we educate communities on
+                        topics such as hygiene, nutrition, mental health, and
+                        chronic disease management.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <button className="bg-green-800 text-white px-4 py-2.5 rounded-lg mt-8">
+                  Explore More
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/*FAQ Section */}
+        <section className="bg-white py-4 px-12">
+          <div className="max-w-[1440px] container mx-auto">
+            <div className="text-center mb-8">
+              <h3 className="text-3xl font-bold mb-4">FAQ</h3>
+              <p
+                className="text-gray-800"
+                style={{
+                  fontWeight: 550,
+                  fontSize: "16px",
+                  lineHeight: "20px",
+                }}
+              >
+                Your questions answered! Explore how RenuHealthcare is making a
+                difference in healthcare, community service, and internship
+                opportunities.
+              </p>
+            </div>
+
+            <div className="flex flex-col md:flex-row items-start md:items-center gap-10">
+              {/* Image */}
+              <div className="w-full md:w-1/2 mb-6 md:mb-0">
+                <img
+                  src=".\HomePageIMGS\WhatsApp Image 2024-09-26 at 20.21.23_dc4ff739 1.png"
+                  alt="FAQ-img"
+                  className="w-full h-auto object-cover rounded-lg"
+                />
+              </div>
+
+              {/* FAQ Content */}
+              <div className="w-full md:w-1/2 space-y-6">
+                <div>
+                  <h4 className="text-xl font-semibold mb-2">
+                    1. What services does RenuHealthcare provide?
+                  </h4>
+                  <p
+                    className="text-gray-800 text-justify"
+                    style={{
+                      fontWeight: 540,
+                      fontSize: "16px",
+                      lineHeight: "20px",
+                    }}
+                  >
+                    A: RenuHealthcare focuses on offering accessible healthcare
+                    services, conducting community health outreach programs, and
+                    providing hands-on internship experiences for students and
+                    young professionals.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-semibold mb-2">
+                    2. Does RenuHealthcare offer internship opportunities?
+                  </h4>
+                  <p
+                    className="text-gray-600 text-justify"
+                    style={{
+                      fontWeight: 540,
+                      fontSize: "16px",
+                      lineHeight: "20px",
+                    }}
+                  >
+                    A: Yes! We offer internships in various sectors including
+                    healthcare services, project management, and social work.
+                    These internships are designed to provide practical
+                    experience and personal growth.
+                  </p>
+                </div>
+
+                <div>
+                  <h4 className="text-xl font-semibold mb-2">
+                    3. How can I get involved in the social activities conducted
+                    by RenuHealthcare?
+                  </h4>
+                  <p
+                    className="text-gray-600 text-justify"
+                    style={{
+                      fontWeight: 540,
+                      fontSize: "16px",
+                      lineHeight: "20px",
+                    }}
+                  >
+                    A: You can participate by volunteering in our healthcare
+                    camps, community clean-up drives, and educational programs.
+                    Visit our 'Get involved' page to learn more about upcoming
+                    activities.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="bg-[#24774F] py-12">
+          <div className="container mx-auto text-center text-white px-6">
+            {/* Main Heading */}
+            <h2 className="text-center text-3xl md:text-4xl font-bold mb-3 leading-[52px] tracking-[0.005em]">
+              We’re Here to Help
+            </h2>
+
+            {/* Subheading */}
+            <p className="text-lg mb-4">
+              Have questions or want to get involved? Reach out to us!
+            </p>
+            {/* Contact Button */}
+            <button className="bg-white text-green-800 font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300">
+              Contact Us
+            </button>
+
+            {/* Contact Details */}
+            <div className="mt-10 flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 -ml-6">
+              {/* Address */}
+              <div className="flex items-center space-x-2">
+                <CiLocationOn className="bg-[#D9D9D9] size-7 rounded-full p-1 text-green-700" />
+                <p>Gurugram, Haryana - 122503, India</p>
+              </div>
+              {/* Email */}
+              <div className="flex items-center space-x-2">
+                <CiMail className="bg-[#D9D9D9] size-7 rounded-full p-1 text-green-700" />
+                <p>info@admedusociety.org</p>
+              </div>
+              {/* Phone */}
+              <div className="flex items-center space-x-2">
+                <IoCall className="bg-[#D9D9D9] size-7 rounded-full p-1 text-green-700" />
+                <p>+91-9671457366</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
 
-export default Home;
+export default HomePage;
