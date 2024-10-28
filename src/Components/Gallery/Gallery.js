@@ -10,7 +10,7 @@ const Gallery = () => {
 
   return (
     <>
-      <div className="sm:w-11/12 bg-[#E1F0DA] m-auto">
+      <div className="sm:w-11/12 bg-blue-50 m-auto">
         <Herosection />
         <Grid />
       </div>

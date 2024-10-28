@@ -143,7 +143,7 @@ const About = () => {
                   required
                   placeholder="Your suggestion..."
                 />
-                <button className="bg-green-700 text-white px-4 py-2 rounded-xl">
+                <button className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-xl">
                   Submit
                 </button>
               </form>
@@ -165,7 +165,7 @@ const About = () => {
             id="5"
             className="lg:px-20 flex flex-col md:flex-row justify-evenly gap-6 my-10 mx-4 overflow-hidden"
           >
-            <div className="flex flex-col items-center bg-green-50 mb-8 shadow-md rounded-lg p-6 ">
+            <div className="flex flex-col items-center bg-blue-100 mb-8 shadow-md rounded-lg p-6 ">
               <img
                 className="w-16 h-16 rounded-full mr-4 mb-4"
                 src="./About-img/ebf77b2941895740c6837470593cc2d4.png"
@@ -174,7 +174,7 @@ const About = () => {
               <div className="flex flex-col items-center text-center justify-center">
                 <p className="text-xl font-bold">Jonaki</p>
                 <p className="font-semibold">
-                  Donated <span className="text-blue-300 ">₹500</span> for food
+                  Donated <span className="text-blue-400 ">₹500</span> for food
                   of Childrens
                 </p>
                 <Link className="text-blue-400 pt-2 flex items-center">
@@ -186,7 +186,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="flex flex-col items-center bg-green-50 mb-8 shadow-md rounded-lg p-6 ">
+            <div className="flex flex-col items-center bg-blue-100 mb-8 shadow-md rounded-lg p-6 ">
               <img
                 className="w-16 h-16 rounded-full mr-4 mb-4"
                 src="./About-img/1674fcaa833e1b51f0c1d1da781564ff.png"
@@ -195,7 +195,7 @@ const About = () => {
               <div className="flex flex-col items-center text-center justify-center">
                 <p className="text-xl font-bold">Jonaki</p>
                 <p className="font-semibold">
-                  Donated <span className="text-blue-300 ">₹500</span> for food
+                  Donated <span className="text-blue-400 ">₹500</span> for food
                   of Childrens
                 </p>
                 <Link className="text-blue-400 pt-2 flex items-center">
@@ -207,7 +207,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="flex flex-col items-center bg-green-50 mb-8 shadow-md rounded-lg p-6 ">
+            <div className="flex flex-col items-center bg-blue-100 mb-8 shadow-md rounded-lg p-6 ">
               <img
                 className="w-16 h-16 rounded-full mr-4 mb-4"
                 src="./About-img/915faaa925d39a5e726e94e0fc15a069.png"
@@ -216,7 +216,7 @@ const About = () => {
               <div className="flex flex-col items-center text-center justify-center">
                 <p className="text-xl font-bold">Jonaki</p>
                 <p className="font-semibold">
-                  Donated <span className="text-blue-300 ">₹500</span> for food
+                  Donated <span className="text-blue-400 ">₹500</span> for food
                   of Childrens
                 </p>
                 <Link className="text-blue-400 pt-2 flex items-center">
@@ -228,7 +228,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="flex flex-col items-center bg-green-50 mb-8 shadow-md rounded-lg p-6 ">
+            <div className="flex flex-col items-center bg-blue-100 mb-8 shadow-md rounded-lg p-6 ">
               <img
                 className="w-16 h-16 rounded-full mr-4 mb-4"
                 src="./About-img/7daf15f4edf74a94bb33984f8d0fd58c.png"
@@ -237,7 +237,7 @@ const About = () => {
               <div className="flex flex-col items-center text-center justify-center">
                 <p className="text-xl font-bold">Jonaki</p>
                 <p className="font-semibold">
-                  Donated <span className="text-blue-300 ">₹500</span> for food
+                  Donated <span className="text-blue-400 ">₹500</span> for food
                   of Childrens
                 </p>
                 <Link className="text-blue-400 flex items-center pt-2">

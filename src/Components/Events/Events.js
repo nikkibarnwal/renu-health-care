@@ -47,7 +47,7 @@ const Event = () => {
 /* Single event component */
 const Card = ({ event }) => {
   return (
-    <div className="card bg-green-50 w-full sm:max-w-xs md:max-w-sm lg:w-[386.67px] h-auto rounded-[12px] border-b border-green-600 p-2 flex flex-col justify-between transition-transform duration-300 hover:shadow-lg transform hover:scale-105">
+    <div className="card bg-blue-50 w-full sm:max-w-xs md:max-w-sm lg:w-[386.67px] h-auto rounded-[12px] border-b border-blue-600 p-2 flex flex-col justify-between transition-transform duration-300 hover:shadow-lg transform hover:scale-105">
       {/* Event image */}
       <div className="h-48 lg:h-56">
         <img
@@ -75,7 +75,7 @@ const Card = ({ event }) => {
         <div className="flex justify-start">
           <button
             type="submit"
-            className="bg-green-600 text-white p-2 rounded-md"
+            className="bg-blue-600 text-white p-2 rounded-md"
           >
             Show Interest
           </button>
