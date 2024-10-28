@@ -1,8 +1,8 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import React from "react";
+import { NavLink, Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -13,7 +13,7 @@ function Header() {
       <Container className="lg:flex lg:justify-between items-center">
         <Navbar.Brand href="#home">
           {/* logo container */}
-          <Link href="/Home/Home">
+          <Link to="/Home/Home">
             <img
               src="/logo.png"
               className="bg-white rounded-lg h-14 w-14"
@@ -69,7 +69,7 @@ function Header() {
           </Nav>
         </Navbar.Collapse>
         <NavLink to="/Login">
-          <button className="bg-[#24774F] text-white rounded-xl px-4 py-2 hidden lg:flex">
+          <button className="bg-blue-500 hover:bg-blue-600 text-white rounded-xl px-4 py-2 hidden lg:flex">
             Log in
           </button>
         </NavLink>

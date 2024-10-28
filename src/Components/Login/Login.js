@@ -29,18 +29,18 @@ const Login = () => {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-[#F0F9F3] gap-[10px]">
+      <div className="min-h-screen flex flex-col lg:flex-row items-center justify-center bg-blue-50 gap-[10px]">
         {/* Left Side Image */}
         <div className=" lg:max-w-4xl flex justify-center lg:h-[512px]">
           <img
-            src="/LoginPageImages/login.svg"
+            src="/LoginPageImages/signup.svg"
             alt="LoginPageImage"
             className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] lg:w-[512px] lg:h-[512px] object-contain"
           />
         </div>
 
         {/* Right Side (Login Form) */}
-        <div className="p-8 rounded-[12px] bg-white w-full max-w-lg lg:w-[520px] lg:h-[512px] border-2 border-green-600 flex flex-col justify-center">
+        <div className="p-8 rounded-[12px] bg-white w-full max-w-lg lg:w-[520px] lg:h-[512px] border-2 border-blue-500 flex flex-col justify-center">
           <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-2 text-center">
             Log In
           </h2>
@@ -56,7 +56,7 @@ const Login = () => {
                 id="emailOrPhone" // Adjusted ID
                 name="emailOrPhone" // Adjusted name
                 placeholder="Enter your e-mail or phone number"
-                className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400 font-medium"
+                className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 font-medium"
                 required
                 pattern="(^\d{10}$|^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$)" // Regex pattern for email or 10-digit phone
                 title="Please enter a valid email or a 10-digit phone number." // Tooltip for invalid input
@@ -72,7 +72,7 @@ const Login = () => {
                 <input
                   type={showPassword ? "text" : "password"}
                   placeholder="Enter your password"
-                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400 mb-2"
+                  className="w-full p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 mb-2"
                   id="password"
                   name="password"
                   required
@@ -91,7 +91,7 @@ const Login = () => {
             <div>
               <button
                 type="submit"
-                className="w-full text-white p-2 hover:bg-green-600 rounded-[12px] bg-[#2F855A]"
+                className="w-full text-white p-2 hover:bg-blue-600 rounded-[12px] bg-blue-700"
               >
                 Log in
               </button>

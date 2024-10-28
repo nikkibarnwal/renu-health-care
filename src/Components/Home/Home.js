@@ -8,6 +8,7 @@ import {
   CiPhone,
 } from "react-icons/ci";
 import { IoCall } from "react-icons/io5";
+
 const HomePage = () => {
   const images = [
     "/HomepageImages/Corousel/Home9.jpg",
@@ -86,7 +87,7 @@ const HomePage = () => {
               to build a healthier, stronger future for all.
             </p>
             <button
-              className="bg-[#24774F] text-white text-base md:text-lg  hover:bg-green-700 transition duration-300"
+              className="bg-blue-500 text-white text-base md:text-lg hover:bg-blue-600 transition duration-300"
               style={{
                 width: "140px",
                 height: "58px",
@@ -202,7 +203,7 @@ const HomePage = () => {
             <button
               key={index}
               className={`h-3 w-3 rounded-full ${
-                currentSlide === index ? "bg-green-700" : "bg-gray-500"
+                currentSlide === index ? "bg-blue-500" : "bg-gray-500"
               }`}
               onClick={() => setCurrentSlide(index)}
             />
@@ -224,177 +225,32 @@ const HomePage = () => {
               </div>
 
               {/* Content on the Right */}
-              <div className="w-full md:w-1/2 md:pl-4">
-                <h2 className="text-3xl font-bold mb-4">
-                  Our Impactful Programs & Events
-                </h2>
-                <p
-                  className="text-gray-800 mb-6 text-justify"
-                  style={{
-                    fontWeight: 550,
-                    fontSize: "16px",
-                    lineHeight: "20px",
-                  }}
+              <div className="w-full md:w-1/2 md:pl-12">
+                <h1
+                  className="font-bold"
+                  style={{ fontSize: "36px", lineHeight: "52px" }}
                 >
-                  Join RenuHealthcare in making a difference through healthcare
-                  camps, community outreach, and internship opportunities. Be
-                  part of the change that uplifts lives and strengthens
-                  communities.
+                  Empowering Lives
+                </h1>
+                <p className="text-gray-800 text-lg mt-4 mb-6">
+                  At RenuHealthcare, we are dedicated to uplifting communities
+                  through various social work and healthcare initiatives.
+                  Through our efforts, we provide resources, support, and
+                  opportunities to empower individuals and create lasting change
+                  in society. Join us in our mission to make a positive impact
+                  in the lives of those who need it most.
                 </p>
-                {/* Two Sub-Sections */}
-                <div className="space-y-8">
-                  {/* First Sub-Section */}
-                  <div className="flex flex-row md:flex-row items-start gap-4">
-                    <img
-                      src=".\HomePageIMGS\d00d765b65.png"
-                      alt="Health & Wellness Camps"
-                      className="w-[100px] md:w-[150px] h-[120px] object-cover rounded-lg"
-                    />
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">
-                        Health & Wellness Camps
-                      </h3>
-                      <p
-                        className="text-gray-800 text-justify"
-                        style={{
-                          fontWeight: 550,
-                          fontSize: "16px",
-                          lineHeight: "20px",
-                        }}
-                      >
-                        These camps are designed to promote preventive care and
-                        raise awareness about common health issues.
-                      </p>
-                    </div>
-                  </div>
-
-                  {/* Second Sub-Section */}
-                  <div className="flex flex-row md:flex-row items-start gap-4">
-                    <img
-                      src=".\HomePageIMGS\840600-39889-mxxltjjonz-1497420426.png"
-                      alt="Community Health Awareness Drives"
-                      className="w-[100px] md:w-[150px] h-[120px] object-cover rounded-lg"
-                    />
-                    <div className="flex-1">
-                      <h3 className="text-xl font-bold mb-2">
-                        Community Health Awareness Drives
-                      </h3>
-                      <p
-                        className="text-gray-800 text-justify"
-                        style={{
-                          fontWeight: 550,
-                          fontSize: "16px",
-                          lineHeight: "20px",
-                        }}
-                      >
-                        Through our awareness drives, we educate communities on
-                        topics such as hygiene, nutrition, mental health, and
-                        chronic disease management.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <button className="bg-green-800 text-white px-4 py-2.5 rounded-lg mt-8">
-                  Explore More
-                </button>
+                <a
+                  href="#"
+                  className="inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-md shadow-lg hover:bg-blue-600 transition duration-300"
+                >
+                  Join Our Cause
+                </a>
               </div>
             </div>
           </div>
         </section>
-
-        {/*FAQ Section */}
-        <section className="bg-white py-4 px-12">
-          <div className="max-w-[1440px] container mx-auto">
-            <div className="text-center mb-8">
-              <h3 className="text-3xl font-bold mb-4">FAQ</h3>
-              <p
-                className="text-gray-800"
-                style={{
-                  fontWeight: 550,
-                  fontSize: "16px",
-                  lineHeight: "20px",
-                }}
-              >
-                Your questions answered! Explore how RenuHealthcare is making a
-                difference in healthcare, community service, and internship
-                opportunities.
-              </p>
-            </div>
-
-            <div className="flex flex-col md:flex-row items-start md:items-center gap-10">
-              {/* Image */}
-              <div className="w-full md:w-1/2 mb-6 md:mb-0">
-                <img
-                  src=".\HomePageIMGS\WhatsApp Image 2024-09-26 at 20.21.23_dc4ff739 1.png"
-                  alt="FAQ-img"
-                  className="w-full h-auto object-cover rounded-lg"
-                />
-              </div>
-
-              {/* FAQ Content */}
-              <div className="w-full md:w-1/2 space-y-6">
-                <div>
-                  <h4 className="text-xl font-semibold mb-2">
-                    1. What services does RenuHealthcare provide?
-                  </h4>
-                  <p
-                    className="text-gray-800 text-justify"
-                    style={{
-                      fontWeight: 540,
-                      fontSize: "16px",
-                      lineHeight: "20px",
-                    }}
-                  >
-                    A: RenuHealthcare focuses on offering accessible healthcare
-                    services, conducting community health outreach programs, and
-                    providing hands-on internship experiences for students and
-                    young professionals.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="text-xl font-semibold mb-2">
-                    2. Does RenuHealthcare offer internship opportunities?
-                  </h4>
-                  <p
-                    className="text-gray-600 text-justify"
-                    style={{
-                      fontWeight: 540,
-                      fontSize: "16px",
-                      lineHeight: "20px",
-                    }}
-                  >
-                    A: Yes! We offer internships in various sectors including
-                    healthcare services, project management, and social work.
-                    These internships are designed to provide practical
-                    experience and personal growth.
-                  </p>
-                </div>
-
-                <div>
-                  <h4 className="text-xl font-semibold mb-2">
-                    3. How can I get involved in the social activities conducted
-                    by RenuHealthcare?
-                  </h4>
-                  <p
-                    className="text-gray-600 text-justify"
-                    style={{
-                      fontWeight: 540,
-                      fontSize: "16px",
-                      lineHeight: "20px",
-                    }}
-                  >
-                    A: You can participate by volunteering in our healthcare
-                    camps, community clean-up drives, and educational programs.
-                    Visit our 'Get involved' page to learn more about upcoming
-                    activities.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="bg-[#24774F] py-12">
+        <section className="bg-blue-500 py-12">
           <div className="container mx-auto text-center text-white px-6">
             {/* Main Heading */}
             <h2 className="text-center text-3xl md:text-4xl font-bold mb-3 leading-[52px] tracking-[0.005em]">
@@ -405,8 +261,9 @@ const HomePage = () => {
             <p className="text-lg mb-4">
               Have questions or want to get involved? Reach out to us!
             </p>
+
             {/* Contact Button */}
-            <button className="bg-white text-green-800 font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300">
+            <button className="bg-white text-blue-800 font-semibold py-2 px-6 rounded-lg shadow-lg hover:bg-gray-200 transition duration-300">
               Contact Us
             </button>
 
@@ -414,17 +271,17 @@ const HomePage = () => {
             <div className="mt-10 flex flex-col md:flex-row justify-center items-center space-y-6 md:space-y-0 md:space-x-12 -ml-6">
               {/* Address */}
               <div className="flex items-center space-x-2">
-                <CiLocationOn className="bg-[#D9D9D9] size-7 rounded-full p-1 text-green-700" />
+                <CiLocationOn className="bg-[#D9D9D9] size-7 rounded-full p-1 text-blue-700" />
                 <p>Gurugram, Haryana - 122503, India</p>
               </div>
               {/* Email */}
               <div className="flex items-center space-x-2">
-                <CiMail className="bg-[#D9D9D9] size-7 rounded-full p-1 text-green-700" />
+                <CiMail className="bg-[#D9D9D9] size-7 rounded-full p-1 text-blue-600" />
                 <p>info@admedusociety.org</p>
               </div>
               {/* Phone */}
               <div className="flex items-center space-x-2">
-                <IoCall className="bg-[#D9D9D9] size-7 rounded-full p-1 text-green-700" />
+                <IoCall className="bg-[#D9D9D9] size-7 rounded-full p-1 text-blue-600" />
                 <p>+91-9671457366</p>
               </div>
             </div>

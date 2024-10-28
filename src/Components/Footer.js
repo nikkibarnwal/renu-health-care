@@ -1,14 +1,14 @@
-import React from 'react';
-import { CiLocationOn } from 'react-icons/ci';
+import React from "react";
+import { CiLocationOn } from "react-icons/ci";
 import {
   FaFacebook,
   FaInstagram,
   FaLink,
   FaXTwitter,
   FaYoutube,
-} from 'react-icons/fa6';
-import { IoCallOutline } from 'react-icons/io5';
-import { MdOutlineEmail } from 'react-icons/md';
+} from "react-icons/fa6";
+import { IoCallOutline } from "react-icons/io5";
+import { MdOutlineEmail } from "react-icons/md";
 
 const Footer = () => {
   return (
@@ -29,15 +29,15 @@ const Footer = () => {
         <div className=" ">
           <h1 className="text-[16px] font-bold mb-4"> Contact Us</h1>
           <p className="text-sm flex justify-start items-center gap-2 pb-3">
-            <CiLocationOn className="bg-[#1D5F41] size-7 rounded-full p-1 text-white" />{' '}
+            <CiLocationOn className="bg-blue-700 size-7 rounded-full p-1 text-white" />{" "}
             Gurugram, Haryana - 122503, India
           </p>
           <p className="text-sm flex justify-start items-center gap-2 pb-3">
-            <MdOutlineEmail className="bg-[#1D5F41] size-7 rounded-full p-1 text-white" />{' '}
+            <MdOutlineEmail className="bg-blue-700 size-7 rounded-full p-1 text-white" />{" "}
             info@admedusociety.org
           </p>
           <p className="text-sm flex justify-start items-center gap-2 pb-3">
-            <IoCallOutline className="bg-[#1D5F41] size-7 rounded-full p-1 text-white" />{' '}
+            <IoCallOutline className="bg-blue-700 size-7 rounded-full p-1 text-white" />{" "}
             +91-9958586721
           </p>
         </div>
@@ -47,27 +47,27 @@ const Footer = () => {
           <h1 className="text-[16px] font-bold mb-4">Resources</h1>
           <ul className="space-y-3">
             <li>
-              <a href="/About" className="hover:text-gray-300">
+              <a href="/About" className="hover:text-slate-500">
                 About Us
               </a>
             </li>
             <li>
-              <a href="#" className="hover:text-gray-300">
+              <a href="#" className="hover:text-slate-500">
                 Careers
               </a>
             </li>
             <li>
-              <a href="/Events" className="hover:text-gray-300">
+              <a href="/Events" className="hover:text-slate-500">
                 Events
               </a>
             </li>
             <li>
-              <a href="/Donate" className="hover:text-gray-300">
+              <a href="/Donate" className="hover:text-slate-500">
                 Donate
               </a>
             </li>
             <li>
-              <a href="/Gallery" className="hover:text-gray-300">
+              <a href="/Gallery" className="hover:text-slate-500">
                 Gallery
               </a>
             </li>
@@ -78,22 +78,22 @@ const Footer = () => {
         <div>
           <h1 className="text-[16px] font-bold mb-2">Connect with us</h1>
           <div className="flex justify-start items-center gap-4 pb-4">
-            <FaXTwitter className="bg-[#1D5F41] size-8 rounded-full p-[6px] text-white" />
-            <FaInstagram className="bg-[#1D5F41] size-8 rounded-full p-[6px] text-white" />
-            <FaFacebook className="bg-[#1D5F41] size-8 rounded-full p-[6px] text-white" />
-            <FaYoutube className="bg-[#1D5F41] size-8 rounded-full p-[6px] text-white" />
-            <FaLink className="bg-[#1D5F41] size-8 rounded-full p-[6px] text-white" />
+            <FaXTwitter className="bg-blue-700 size-8 rounded-full p-[6px] text-white" />
+            <FaInstagram className="bg-blue-700 size-8 rounded-full p-[6px] text-white" />
+            <FaFacebook className="bg-blue-700 size-8 rounded-full p-[6px] text-white" />
+            <FaYoutube className="bg-blue-700 size-8 rounded-full p-[6px] text-white" />
+            <FaLink className="bg-blue-700 size-8 rounded-full p-[6px] text-white" />
           </div>
-          <p className="text-sm  font-bold pb-2">Subscribe our Newsletter</p>
+          <p className="text-sm  font-bold pb-2">Subscribe to our Newsletter</p>
           <form className="flex ">
             <input
               type="email"
               placeholder="Enter your email"
-              className="p-2 border-[#24774F] border-1 rounded-l-2xl text-gray-500"
+              className="p-2 border-blue-700 border-1 rounded-l-2xl text-gray-500"
             />
             <button
               type="submit"
-              className="bg-[#24774F] text-white px-4 py-2 rounded-r-2xl "
+              className="bg-blue-700 text-white px-4 py-2 rounded-r-2xl "
             >
               Subscribe
             </button>
@@ -113,11 +113,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-/// git checkout development
-//git checkout -b kabit-navbar
-//git add .
-//git commit -m""
-//git pull origin development
-//git push
-//remotelink copy and paste in terminal
